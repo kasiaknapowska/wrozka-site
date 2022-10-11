@@ -1,0 +1,16 @@
+header {
+  display: none;
+  margin: 0 auto;
+  padding: var(--space-3) var(--size-gutter);
+}
+@media screen and (min-width: 900px) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.header_info {
+  display: flex;
+  gap: var(--space-5);
+  color: var(--color-primary);
+}

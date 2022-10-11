@@ -2,22 +2,15 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { contactData } from "../data/contactData"
+import { contactData } from "../../data/contactData"
+import "./header.css"
 
 const Header = ({ siteTitle }) => {
   const { address, email, phone } = contactData
 
   return (
-    <header
-      style={{
-        margin: `0 auto`,
-        padding: `var(--space-4) var(--size-gutter)`,
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: `space-between`,
-      }}
-    >
-      <div>
+    <header>
+      <div className="header_info">
         <span>{address}</span>
         <span>{email}</span>
         <span>{phone}</span>

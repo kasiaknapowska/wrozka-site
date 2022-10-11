@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Hero from "../components/hero"
+import Hero from "../components/hero/hero"
 import * as styles from "../components/index.module.css"
 
 const links = [
@@ -77,9 +77,11 @@ const IndexPage = () => (
       hero={{
         type: "main",
         title: "Dentysta dla Twojego dziecka",
-        description: "Lorem ipsum dolor",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       }}
     />
+    <div className="container">
+
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
@@ -99,6 +101,7 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
+    </div>
   </Layout>
 )
 
@@ -107,6 +110,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Home"/>
 
 export default IndexPage
