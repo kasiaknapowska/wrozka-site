@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Wróżka zębuszka`,
+    description: `Stomatologia dziecięca Katowice`,
+    author: `@KKnapowska`,
+    image: `/logo-wz-512.png`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`, //docelowa domena wróżki zębuszki
   },
   plugins: [
     `gatsby-plugin-image`,
