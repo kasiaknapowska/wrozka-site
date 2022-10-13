@@ -2,9 +2,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import IconFB from "../../assets/svg/icon-fb.svg"
-import IconInsta from "../../assets/svg/icon-insta.svg"
-import IconYT from "../../assets/svg/icon-yt.svg"
+import IconFB from "../../svg/icon-fb.svg"
+import IconInsta from "../../svg/icon-insta.svg"
+import IconYT from "../../svg/icon-yt.svg"
 
 import {
   smIcon,

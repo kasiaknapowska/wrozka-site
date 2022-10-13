@@ -7,13 +7,7 @@
   padding: 6rem var(--space-6);
   width: 100%;
 }
-.cubesContent a {
-  display: block;
-  margin-top: var(--space-4);
-  text-transform: uppercase;
-  font-size: var(--font-sm);
-  font-weight: 700;
-}
+
 .cubesImg {
   width: 100%;
 }
@@ -37,4 +31,8 @@
     width: 50%;
     flex-shrink: 0;
   }
+}
+.color {
+  color: white;
+  background-color: var(--color-secondary);
 }

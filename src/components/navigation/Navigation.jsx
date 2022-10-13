@@ -7,8 +7,8 @@ import { navLinks } from "../../data/navLinks"
 
 import SocialMedia from "../socialMedia/SocialMedia"
 
-import LogoColor from "../../assets/svg/logo-color.svg"
-import LogoWhite from "../../assets/svg/logo-white.svg"
+import LogoColor from "../../svg/logo-color.svg"
+import LogoWhite from "../../svg/logo-white.svg"
 import {
   logo,
   navMain,

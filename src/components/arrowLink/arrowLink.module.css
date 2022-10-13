@@ -1,0 +1,50 @@
+.linkContainer { 
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: var(--space-4);
+}
+.linkContainer a {
+  cursor: pointer;
+  display: block;
+  margin-top: var(--space-1);
+  text-transform: uppercase;
+  font-size: var(--font-sm);
+  font-weight: 700;
+}
+.linkContainer a:hover {
+ text-decoration: none;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.arrow div:first-child {
+  width: 1.5rem;
+  height: 1px;
+  border-bottom: 2px solid var(--color-text);
+  position: relative;
+  right: -.8rem;
+  top: .01rem;
+}
+.arrow div:last-child {
+  width: .75rem;
+  height: .75rem;
+  border-top: 2px solid var(--color-text);
+  border-right: 2px solid var(--color-text);
+  transform: rotate(45deg);
+  border-color: var(--color-text);
+  
+}
+.linkContainer a:hover ~ .arrow {
+  transform: translateX(.5rem);
+  transition: 0.25s ease-out;
+}
+.color a {
+  color: white;
+}
+.color .arrow div {
+  border-color: white;
+}

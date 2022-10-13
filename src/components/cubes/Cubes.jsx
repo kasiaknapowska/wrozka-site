@@ -6,22 +6,23 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Arrow from "../../assets/svg/arrow.svg"
 import {
   cubesContainer,
   standard,
   reverse,
   cubesContent,
-  cubesImg
+  cubesImg,
+  color,
 } from "./cubes.module.css"
+import ArrowLink from "../arrowLink/ArrowLink"
 
-const Cubes = ({ data, type, video, title, description, link }) => {
+const Cubes = ({ data, type, video, title, description }) => {
   const image = getImage(data.allFile.nodes[0])
   return (
     <div
       className={`${cubesContainer} ${
-        type === "standard" ? standard : reverse
-      }`}
+        type.includes("standard") ? standard : reverse
+      }  ${type.includes("color") && color}`}
     >
       {/* <StaticImage
       src="../../assets/narkoza.jpg"
@@ -34,16 +35,15 @@ const Cubes = ({ data, type, video, title, description, link }) => {
       style={{width: '50vw', height: '100%' }}
        /> */}
       <GatsbyImage
-      className={cubesImg}
+        className={cubesImg}
         image={image}
         alt={title}
         style={{ height: "100%" }}
-        
       />
-      <div className={cubesContent}>
+      <div className={`${cubesContent} ${type.includes("color") && color}`}>
         <h2>{title}</h2>
         <p>{description}</p>
-        <Link to={`/${data.allFile.nodes[0].name}`}>Czytaj więcej</Link>
+        <ArrowLink link={data.allFile.nodes[0].name} type={type} />
       </div>
     </div>
   )

@@ -1,12 +1,10 @@
 import * as React from "react"
-import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
-import * as styles from "../index.module.css"
 
-import Arrow from "../../assets/svg/arrow.svg"
+import Arrow from "../../svg/arrow.svg"
 import {
   heroBg,
   heroContent,

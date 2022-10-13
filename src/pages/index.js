@@ -85,14 +85,20 @@ const IndexPage = ({ data }) => (
     />
     <Cubes
       title="Leczenie w narkozie"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
       type="reverse"
       data={data}
     />
     <Cubes
       title="Profilaktyka"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
       type="standard"
+      data={data}
+    />
+     <Cubes
+      title="Ortodoncja"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+      type="reverse color"
       data={data}
     />
     <div className="container">
