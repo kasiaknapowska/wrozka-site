@@ -9,8 +9,11 @@ header {
         justify-content: flex-end;
     }
 }
-.header_info {
+.headerInfo {
   display: flex;
   gap: var(--space-5);
   color: var(--color-primary);
+}
+.headerInfo span {
+  font-size: var(--font-sx);
 }

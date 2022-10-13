@@ -17,10 +17,10 @@
   --font-web: 'Nunito', sans-serif;
   --font-xxlg: 2.75rem;
   --font-xlg: 2rem;
-  --font-lg: 1.125rem;
-  --font-md: 1rem;
-  --font-sm: 0.875rem;
-  --font-sx: 0.75rem;
+  --font-lg: 1.5rem;
+  --font-md: 1.125rem;
+  --font-sm: 1rem;
+  --font-sx: 0.875rem;
   --line-height-loose: 1.75;
   --line-height-normal: 1.5;
   --line-height-dense: 1.1;
@@ -61,7 +61,7 @@ a {
   color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
- font-family: var(--font-web);
+  font-family: var(--font-web);
 }
 a:active,
 a:hover {
@@ -89,12 +89,20 @@ h1 {
   margin-bottom: 2rem;
   padding: 0;
   line-height: var(--line-height-dense);
+  letter-spacing: -0.01rem;
+  font-size: var(--font-lg);
+}
+h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  line-height: var(--line-height-dense);
+  font-size: var(--font-lg);
   letter-spacing: -0.01em;
-  font-size: var(--font-xlg);
 }
 @media screen and (min-width: 450px) {
  h1 {
-  font-size: var(--font-xxlg);
+  font-size: var(--font-xlg);
  }
 }
 h1 > b {
@@ -199,7 +207,7 @@ li > p {
 p {
   max-width: 680px;
   margin: 0 auto;
-  font-size: var(--font-lg);
+  font-size: var(--font-sm);
 }
 code {
   font-size: 0.875rem;
@@ -269,7 +277,7 @@ pre tt:after {
 .btn {
   padding: var(--space-3) var(--space-5);
   text-transform: uppercase;
-  font-size: var(--font-md);
+  font-size: var(--font-sx);
   border-radius: var(--border-radius);
   border: 1px solid white;
   background-color: transparent;
@@ -291,5 +299,5 @@ footer {
   background-color: var(--color-secondary);
   color: white;
   margin-top: var(--space-5);
-  font-size: var(--font-sm);
+  font-size: var(--font-sx);
 }

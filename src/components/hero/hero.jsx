@@ -50,11 +50,11 @@ const Hero = ({ hero }) => {
 }
 
 Hero.propTypes = {
-  heroType: PropTypes.object,
+  hero: PropTypes.object,
 }
 
 // Hero.defaultProps = {
-//   heroType: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
+//   hero: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
 // }
 
 export default Hero

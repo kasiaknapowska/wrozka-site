@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -6,6 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import * as styles from "../components/index.module.css"
+import Cubes from "../components/cubes/Cubes"
 
 const links = [
   {
@@ -70,37 +72,49 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Home" />
     <Hero
       hero={{
         type: "main",
         title: "Dentysta dla Twojego dziecka",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       }}
     />
+    <Cubes
+      title="Leczenie w narkozie"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
+      type="reverse"
+      data={data}
+    />
+    <Cubes
+      title="Profilaktyka"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
+      type="standard"
+      data={data}
+    />
     <div className="container">
-
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
+      <ul className={styles.list}>
+        {links.map(link => (
+          <li key={link.url} className={styles.listItem}>
+            <a
+              className={styles.listItemLink}
+              href={`${link.url}${utmParameters}`}
+            >
+              {link.text} ↗
+            </a>
+            <p className={styles.listItemDescription}>{link.description}</p>
+          </li>
+        ))}
+      </ul>
+      {moreLinks.map((link, i) => (
+        <React.Fragment key={link.url}>
+          <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+          {i !== moreLinks.length - 1 && <> · </>}
+        </React.Fragment>
       ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
     </div>
   </Layout>
 )
@@ -110,6 +124,21 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home"/>
+export const Head = () => <Seo title="Home" />
+
+export const pageQuery = graphql`
+  query {
+    allFile(filter: {name: {eq: "narkoza"}}) {
+      nodes {
+        relativePath
+        id
+        name
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

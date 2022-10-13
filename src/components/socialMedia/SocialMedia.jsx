@@ -17,15 +17,15 @@ const SocialMedia = ({ type }) => {
 
   return (
     <div className={smIcons}>
-    <Link to="https://pl-pl.facebook.com/" target="blank">
+    <a href="https://pl-pl.facebook.com/" target="blank">
       <IconFB className={smIcon} />
-    </Link>
-    <Link to="https://www.instagram.com/" target="blank">
+    </a>
+    <a href="https://www.instagram.com/" target="blank">
       <IconInsta className={smIcon} />
-    </Link>
-    <Link to="https://www.youtube.com/" target="blank">
+    </a>
+    <a href="https://www.youtube.com/" target="blank">
       <IconYT className={smIcon} />
-    </Link>
+    </a>
   </div>
   )
 }

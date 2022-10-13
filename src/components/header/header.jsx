@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
 
   return (
     <header>
-      <div className="header_info">
+      <div className="headerInfo">
         <span>{address}</span>
         <span>{email}</span>
         <span>{phone}</span>
