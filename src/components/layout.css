@@ -93,6 +93,18 @@ h1 {
   font-size: var(--font-lg);
 }
 h2 {
+  font-size: var(--font-xlg);
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+h3 {
+  margin: 0 auto;
+  font-size: var(--font-md);
+  margin-bottom: var(--space-4);
+  font-weight: 500;
+}
+h4 {
   margin: 0;
   margin-bottom: 1rem;
   padding: 0;
@@ -205,7 +217,7 @@ li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
 p {
-  max-width: 680px;
+
   margin: 0 auto;
   font-size: var(--font-sm);
 }
@@ -256,33 +268,40 @@ pre tt:after {
 
 .container {
   margin: 0 auto;
-  max-width: 95%;
+  max-width: 90%;
   padding: var(--size-gutter) 0;
 }
+
 @media screen and (min-width: 900px) {
-  .container {
-    max-width: 90%;
+  
+  .containerS {
+    max-width: 700px;
+    padding: var(--size-gap) 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     max-width: var(--size-content);
   }
+  .containerS {
+    max-width: 800px;
+  }
 }
+
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .btn {
-  padding: var(--space-3) var(--space-5);
+  padding: var(--space-3) var(--space-4);
   text-transform: uppercase;
   font-size: var(--font-sx);
   border-radius: var(--border-radius);
   border: 1px solid white;
   background-color: transparent;
   font-family: var(--font-web);
-  margin: var(--space-2);
+  margin: var(--space-5) 0;
   min-width: 230px;
   cursor: pointer;
 }
@@ -295,6 +314,10 @@ color: white;
 .btnSecondary {
   color: white;
   }
+.heroBtn {
+  margin: var(--space-2);
+}
+  
 footer {
   background-color: var(--color-secondary);
   color: white;

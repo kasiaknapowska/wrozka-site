@@ -41,7 +41,7 @@ const Cubes = ({ data, type, video, title, description }) => {
         style={{ height: "100%" }}
       />
       <div className={`${cubesContent} ${type.includes("color") && color}`}>
-        <h2>{title}</h2>
+        <h4>{title}</h4>
         <p>{description}</p>
         <ArrowLink link={data.allFile.nodes[0].name} type={type} />
       </div>

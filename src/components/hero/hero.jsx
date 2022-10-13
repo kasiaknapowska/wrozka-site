@@ -38,8 +38,8 @@ const Hero = ({ hero }) => {
         <div className={`container ${heroText}`}>
           <h1>{title}</h1>
           <p>{description}</p>
-          <button className="btn btnPrimary">Umów wizytę</button>
-          <button className="btn btnSecondary">Dowiedz się więcej</button>
+          <button className="btn btnPrimary heroBtn">Umów wizytę</button>
+          <button className="btn btnSecondary heroBtn">Dowiedz się więcej</button>
         </div>
         <Arrow className={arrow} />
       </div>
