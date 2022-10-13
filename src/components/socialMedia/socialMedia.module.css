@@ -1,0 +1,50 @@
+.smIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.smIcons a {
+  display: inline-block;
+}
+.smIcon {
+  max-width: 3rem;
+  height: 2rem;
+  position: relative;
+  z-index: 5;
+  margin: var(--size-gap) var(--size-gutter);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .smIcons {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: calc(50vh - 192px / 2);
+  }
+  .smIcons a {
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius-s) 0 0 var(--border-radius-s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25rem 0;
+  }
+  .smIcons a:first-child {
+    background-color: var(--color-accent-1);
+  }
+  .smIcons a:nth-child(2) {
+    background-color: var(--color-primary);
+  }
+  .smIcons a:last-child {
+    background-color: var(--color-secondary);
+  }
+  .smIcon {
+    margin: var(--space-3);
+    max-width: 2rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+  }
+}

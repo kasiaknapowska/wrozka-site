@@ -1,0 +1,119 @@
+.logo {
+  width: 200px;
+}
+.navMain {
+  color: white;
+}
+.navPage {
+  color: var(--color-text);
+}
+@media screen and (max-width: 900px) {
+  .heroNav {
+    display: none;
+  }
+}
+
+.heroNavMobile {
+  display: block;
+  -webkit-animation: fadeIn 0.25s;
+  animation: fadeIn 0.25s;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  z-index: 3;
+  text-align: center;
+  padding-top: 25vh;
+}
+
+.heroNavMobile a {
+  display: block;
+  padding-left: 0;
+  font-size: 1.25rem;
+  margin: var(--space-4) 0;
+}
+.heroNavMobile a:hover {
+  text-decoration: none;
+}
+
+.heroNavLink {
+  padding-left: var(--size-gutter);
+}
+
+.hamburger {
+  width: 2.25rem;
+  height: 2.5rem;
+  position: relative;
+  margin: auto var(--space-3);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 4;
+}
+@media screen and (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+  top: .8rem;
+}
+.hamburger span:nth-child(4) {
+  top: 1.6rem;
+}
+
+.hamburger.open span:nth-child(1) {
+  top: .8rem;
+  width: 0%;
+  left: 50%;
+}
+
+.hamburger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.hamburger.open span:nth-child(4) {
+  top: .8rem;
+  width: 0%;
+  left: 50%;
+}

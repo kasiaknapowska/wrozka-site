@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Hero from "../components/hero/hero"
+import Hero from "../components/hero/Hero"
 import * as styles from "../components/index.module.css"
 
 const links = [
