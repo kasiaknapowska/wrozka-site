@@ -7,7 +7,6 @@ export const navLinks = [
       "Zdrowe zęby mleczne to inwestycja w zdrowe zęby stałe i prawidłowy zgryz",
   },
   { text: "Zęby bez próchnicy", url: "zeby-bez-prochnicy" },
-  { text: "Bez borowania", url: "bez-borowania" },
   { text: "Ortodoncja", url: "ortodoncja" },
   { text: "Narkoza", url: "narkoza" },
   { text: "Kontakt", url: "kontakt" },

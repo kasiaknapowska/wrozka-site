@@ -1,5 +1,6 @@
 :root {
   --border-radius: 2rem;
+  --border-radius-s: .5rem;
   --color-text: #343434;
   --color-primary: #F27BA6;
   --color-secondary: #55ABA7;
@@ -15,7 +16,7 @@
     "Courier New", monospace; */
   --font-web: 'Nunito', sans-serif;
   --font-xxlg: 3rem;
-  --font-xlg: 1.5rem;
+  --font-xlg: 2rem;
   --font-lg: 1.125rem;
   --font-md: 1rem;
   --font-sm: 0.875rem;
@@ -30,7 +31,7 @@
   --space-5: 2rem;
   --space-6: 4rem;
   --size-content: 1080px;
-  --size-gutter: var(--space-5);
+  --size-gutter: var(--space-4);
   --size-gap: var(--space-6);
   /* --desktop: 1000px;
   --tablet: 800px;
@@ -60,7 +61,7 @@ a {
   color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
- 
+ font-family: var(--font-web);
 }
 a:active,
 a:hover {
@@ -89,7 +90,12 @@ h1 {
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
+  font-size: var(--font-xlg);
+}
+@media screen and (min-width: 450px) {
+ h1 {
   font-size: var(--font-xxlg);
+ }
 }
 h1 > b {
   color: var(--color-primary);
@@ -245,7 +251,7 @@ pre tt:after {
   max-width: 95%;
   padding: var(--size-gutter) 0;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .container {
     max-width: 90%;
   }
@@ -268,10 +274,11 @@ pre tt:after {
   border: 1px solid white;
   background-color: transparent;
   font-family: var(--font-web);
-  margin: var(--space-3);
+  margin: var(--space-2);
   min-width: 230px;
   cursor: pointer;
 }
+
 .btnPrimary {
 background-color: var(--color-secondary);
 border-color: var(--color-secondary);
@@ -283,4 +290,6 @@ color: white;
 footer {
   background-color: var(--color-secondary);
   color: white;
+  margin-top: var(--space-5);
+  font-size: var(--font-sm);
 }
