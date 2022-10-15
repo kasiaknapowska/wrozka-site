@@ -17,7 +17,10 @@ import {
 import ArrowLink from "../arrowLink/ArrowLink"
 
 const Cubes = ({ data, type, video, title, description }) => {
-  const image = getImage(data.allFile.nodes[0])
+  // const image = getImage(data.allFile.nodes[0])
+  // const image = getImage(data.image1.allFile.nodes[0])
+  console.log(data.nodes[0])
+  const image = getImage(data.nodes[0])
   return (
     <div
       className={`${cubesContainer} ${
@@ -43,7 +46,7 @@ const Cubes = ({ data, type, video, title, description }) => {
       <div className={`${cubesContent} ${type.includes("color") && color}`}>
         <h4>{title}</h4>
         <p>{description}</p>
-        <ArrowLink link={data.allFile.nodes[0].name} type={type} />
+        <ArrowLink link={data.nodes[0].name} type={type} />
       </div>
     </div>
   )

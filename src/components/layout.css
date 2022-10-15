@@ -8,12 +8,8 @@
   --color-accent-2: #C07BC4;
   --color-neutral-light: #CECECE;
   --color-gradient: linear-gradient(235deg, rgba(242,123,166,1) 0%, rgba(119,128,205,1) 70%, rgba(0,128,189,1) 100%);
-  /* --color-code-bg: #fff4db;
-  --color-code: #8a6534; */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  /* --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace; */
   --font-web: 'Nunito', sans-serif;
   --font-xxlg: 2.75rem;
   --font-xlg: 2rem;
@@ -33,9 +29,6 @@
   --size-content: 1080px;
   --size-gutter: var(--space-4);
   --size-gap: var(--space-6);
-  /* --desktop: 1000px;
-  --tablet: 800px;
-  --mobile: 600px; */
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -56,21 +49,7 @@ body {
   padding: 0;
   word-wrap: break-word;
 }
-a {
-  background-color: transparent;
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 500;
-  font-family: var(--font-web);
-}
-a:active,
-a:hover {
-  outline-width: 0;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-decoration-color: var(--color-secondary);
-  text-underline-offset: 6px;
-}
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
@@ -84,42 +63,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  margin: 0;
-  margin-bottom: 2rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01rem;
-  font-size: var(--font-lg);
-}
-h2 {
-  font-size: var(--font-xlg);
-  margin-bottom: var(--space-4);
-  color: var(--color-primary);
-}
 
-h3 {
-  margin: 0 auto;
-  font-size: var(--font-md);
-  margin-bottom: var(--space-4);
-  font-weight: 500;
-}
-h4 {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  font-size: var(--font-lg);
-  letter-spacing: -0.01em;
-}
-@media screen and (min-width: 450px) {
- h1 {
-  font-size: var(--font-xlg);
- }
-}
-h1 > b {
-  color: var(--color-primary);
-}
 img {
   border-style: none;
   max-width: 100%;
@@ -220,6 +164,7 @@ p {
 
   margin: 0 auto;
   font-size: var(--font-sm);
+  margin-bottom: var(--space-4);
 }
 code {
   font-size: 0.875rem;
@@ -266,25 +211,112 @@ pre tt:after {
 }
 
 
+/* site custom styles */
+
+
+h1 {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  line-height: var(--line-height-dense);
+  letter-spacing: -0.01rem;
+  font-size: var(--font-lg);
+}
+h2 {
+  font-size: var(--font-xlg);
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+h3 {
+  margin: 0 auto;
+  font-size: var(--font-md);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+}
+h4 {
+  margin: 0;
+  margin-bottom: var(--space-3);
+  padding: 0;
+  line-height: var(--line-height-dense);
+  font-size: var(--font-lg);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+@media screen and (min-width: 450px) {
+ h1 {
+  font-size: var(--font-xlg);
+ }
+}
+h1 > b {
+  color: var(--color-primary);
+}
+
+a {
+  background-color: transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-web);
+}
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--color-secondary);
+  text-underline-offset: 6px;
+}
+
+ul li {
+  position: relative;
+  left: -1.5rem;
+  background: url('../assets/bullet.png') no-repeat top left;
+  padding: 0 0 0 2.25rem;
+  list-style: none;
+  background-size: .8rem;
+  background-repeat: no-repeat;
+  background-position: 0 .3rem;
+}
+
+ol {
+  list-style: none;
+  counter-reset: awesome-counter;
+}
+ol li {
+  counter-increment: awesome-counter;
+  position: relative;
+  left: -2rem;
+  display: flex;
+}
+ol li::before {
+  content: "0" counter(awesome-counter);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--font-lg);
+  margin-right: var(--space-3);
+  line-height: 0;
+  font-family: var(--font-web);
+ position: relative;
+ top: .75rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 90%;
   padding: var(--size-gutter) 0;
 }
-
+.containerS {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: var(--size-gap) 0;
+}
 @media screen and (min-width: 900px) {
-  
   .containerS {
     max-width: 700px;
-    padding: var(--size-gap) 0;
   }
-}
-@media screen and (min-width: 1200px) {
   .container {
     max-width: var(--size-content);
-  }
-  .containerS {
-    max-width: 800px;
   }
 }
 
@@ -317,7 +349,9 @@ color: white;
 .heroBtn {
   margin: var(--space-2);
 }
-  
+
+
+
 footer {
   background-color: var(--color-secondary);
   color: white;
