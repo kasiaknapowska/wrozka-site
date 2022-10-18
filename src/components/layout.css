@@ -248,6 +248,11 @@ h4 {
   font-size: var(--font-xlg);
  }
 }
+@media screen and (min-width: 800px) {
+  h1 {
+   font-size: var(--font-xxlg);
+  }
+ }
 h1 > b {
   color: var(--color-primary);
 }

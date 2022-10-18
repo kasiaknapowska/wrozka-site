@@ -7,23 +7,21 @@ import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import {
-  cubesContainer,
+  halfsContainer,
   standard,
   reverse,
-  cubesContent,
-  cubesImg,
+  halfsContent,
+  halfsImg,
   color,
-} from "./cubes.module.css"
+} from "./halfs.module.css"
 import ArrowLink from "../arrowLink/ArrowLink"
 
-const Cubes = ({ data, type, video, title, description }) => {
-  // const image = getImage(data.allFile.nodes[0])
-  // const image = getImage(data.image1.allFile.nodes[0])
+const Halfs = ({ data, type, video, title, description }) => {
   console.log(data.nodes[0])
   const image = getImage(data.nodes[0])
   return (
     <div
-      className={`${cubesContainer} ${
+      className={`${halfsContainer} ${
         type.includes("standard") ? standard : reverse
       }  ${type.includes("color") && color}`}
     >
@@ -38,12 +36,12 @@ const Cubes = ({ data, type, video, title, description }) => {
       style={{width: '50vw', height: '100%' }}
        /> */}
       <GatsbyImage
-        className={cubesImg}
+        className={halfsImg}
         image={image}
         alt={title}
         style={{ height: "100%" }}
       />
-      <div className={`${cubesContent} ${type.includes("color") && color}`}>
+      <div className={`${halfsContent} ${type.includes("color") && color}`}>
         <h4>{title}</h4>
         <p>{description}</p>
         <ArrowLink link={data.nodes[0].name} type={type} />
@@ -52,12 +50,12 @@ const Cubes = ({ data, type, video, title, description }) => {
   )
 }
 
-Cubes.propTypes = {
-  cubes: PropTypes.string,
+Halfs.propTypes = {
+  halfs: PropTypes.string,
 }
 
 // Hero.defaultProps = {
 //   heroType: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
 // }
 
-export default Cubes
+export default Halfs

@@ -1,15 +1,20 @@
 import * as React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
-import Cubes from "../components/cubes/Cubes"
+import Halfs from "../components/halfs/Halfs"
 import GallerySlider from "../components/gallerySlider/GallerySlider"
 import * as styles from "../components/index.module.css"
+import CubeLinks from "../components/cubeLinks/CubeLinks"
 
+import HigienaIcon from "../svg/higiena-icon.svg"
+import FluoryzacjaIcon from "../svg/fluoryzacja-icon.svg"
+import OzonowanieIcon from "../svg/ozonowanie-icon.svg"
+import LakowanieIcon from "../svg/lakowanie-icon.svg"
 
 const links = [
   {
@@ -72,10 +77,16 @@ const moreLinks = [
   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
 
+const cubeElements = [
+  {name: 'higiena', link: 'profilaktyka/higiena'},
+  {name: 'fluoryzacja', link: 'profilaktyka/fluoryzacja'},
+  {name: 'ozonowanie', link: 'profilaktyka/ozonowanie'},
+  {name: 'lakowanie', link: 'profilaktyka/lakowanie'},
+]
+
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = ({ data }) => (
-  
   <Layout>
     <Seo title="Home" />
     <Hero
@@ -86,40 +97,78 @@ const IndexPage = ({ data }) => (
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       }}
     />
-    <Cubes
+    <Halfs
       title="Leczenie w narkozie"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
       type="reverse"
       data={data.image1}
     />
-    <Cubes
+    <Halfs
       title="Profilaktyka"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
       type="standard"
       data={data.image2}
     />
-     <Cubes
+    <Halfs
       title="Ortodoncja"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
       type="reverse color"
       data={data.image3}
     />
     <div className="containerS">
-    <h2>Jak leczymy</h2>
-    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur</h3>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-    <ul>
-      <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-      <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</li>
-    </ul>
-    <ol>
-      <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-      <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</li>
-    </ol>
-    
-    <button className="btn btnPrimary">Umów wizytę</button>
+      <h2>Jak leczymy</h2>
+      <h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut consectetur
+      </h3>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+        voluptatem.
+      </p>
+      <ul>
+        <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+        <li>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium
+        </li>
+      </ul>
+
+      <button className="btn btnPrimary">Umów wizytę</button>
     </div>
-    <GallerySlider gallery={data.gallery}/>
+    <CubeLinks cubeElements={cubeElements}/>
+    <div className="containerS">
+      <h2>Zęby bez próchnicy</h2>
+      <h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut consectetur
+      </h3>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+        voluptatem.
+      </p>
+      <ol>
+        <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+        <li>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium
+        </li>
+      </ol>
+    </div>
+    <GallerySlider gallery={data.gallery} />
     <div className="container">
       <ul className={styles.list}>
         {links.map(link => (
@@ -168,7 +217,7 @@ export const Head = () => <Seo title="Home" />
 
 export const pageQuery = graphql`
   query {
-    image1: allFile(filter: {name: {eq: "narkoza"}}) {
+    image1: allFile(filter: { name: { eq: "narkoza" } }) {
       nodes {
         relativePath
         id
@@ -178,7 +227,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    image2: allFile(filter: {name: {eq: "profilaktyka"}}) {
+    image2: allFile(filter: { name: { eq: "profilaktyka" } }) {
       nodes {
         relativePath
         id
@@ -188,7 +237,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    image3: allFile(filter: {name: {eq: "ortodoncja"}}) {
+    image3: allFile(filter: { name: { eq: "ortodoncja" } }) {
       nodes {
         relativePath
         id
@@ -198,7 +247,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    gallery: allFile(filter: {sourceInstanceName: {eq: "gallery"}}) {
+    gallery: allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
       nodes {
         relativePath
         id
@@ -209,7 +258,6 @@ export const pageQuery = graphql`
       }
     }
   }
-  
 `
 
 export default IndexPage

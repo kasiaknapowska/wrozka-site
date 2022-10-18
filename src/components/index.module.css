@@ -1,7 +1,6 @@
-.list {
+/* .list {
   display: grid;
   margin: 0;
-  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
   --w: 280px;
   --n: 2;
   gap: var(--size-gap);
@@ -9,6 +8,34 @@
     auto-fit,
     minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr)
   );
+  margin-bottom: var(--size-gap);
+  margin-top: var(--size-gap);
+} */
+
+.list {
+  display: grid;
+  margin: 0;
+
+  /* first breakpoint*/
+  --w1: 1200px;
+  --n: 6;
+  /* second breakpoint*/
+  --w2: 800px;
+  --m: 4;
+  /* third breakpoint*/
+  --w3: 400px;
+  --p: 2;
+ 
+  grid-template-columns:
+    repeat(auto-fill,
+      minmax(clamp(clamp(clamp(  
+            100%/(var(--n) + 1) + 0.1%,
+              (var(--w1) - 100%)*1000,
+            100%/(var(--m) + 1) + 0.1%), 
+              (var(--w2) - 100%)*1000,
+            100%/(var(--p) + 1) + 0.1%), 
+              (var(--w3) - 100%)*1000,
+            100%), 1fr));
   margin-bottom: var(--size-gap);
   margin-top: var(--size-gap);
 }
@@ -47,4 +74,3 @@
 .textCenter {
   text-align: center;
 }
-
