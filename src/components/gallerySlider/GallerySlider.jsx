@@ -50,7 +50,7 @@ const GallerySlider = ({ gallery }) => {
   }
 
   return (
-    <div className={galleryContainer}>
+    <section className={galleryContainer}>
       <div className={sliderNav}>
       <div onClick={goToPrevious}></div>
       <div onClick={goToNext}></div>
@@ -70,7 +70,7 @@ const GallerySlider = ({ gallery }) => {
         image={images[nextIndex]}
         alt={gallery.nodes[nextIndex].name}
       />
-    </div>
+    </section>
   )
 }
 

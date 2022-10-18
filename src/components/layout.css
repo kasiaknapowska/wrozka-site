@@ -225,6 +225,7 @@ h1 {
 h2 {
   font-size: var(--font-xlg);
   margin-bottom: var(--space-4);
+  margin-top: 0;
   color: var(--color-primary);
 }
 

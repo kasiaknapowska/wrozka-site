@@ -20,7 +20,7 @@ const Halfs = ({ data, type, video, title, description }) => {
   console.log(data.nodes[0])
   const image = getImage(data.nodes[0])
   return (
-    <div
+    <section
       className={`${halfsContainer} ${
         type.includes("standard") ? standard : reverse
       }  ${type.includes("color") && color}`}
@@ -46,7 +46,7 @@ const Halfs = ({ data, type, video, title, description }) => {
         <p>{description}</p>
         <ArrowLink link={data.nodes[0].name} type={type} />
       </div>
-    </div>
+    </section>
   )
 }
 

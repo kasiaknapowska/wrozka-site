@@ -12,7 +12,7 @@ import LakowanieIcon from "../../svg/lakowanie-icon.svg"
 const CubeLinks = ({cubeElements}) => {
 console.log(cubeElements)
   return (
- <div className={cubeLinksContainer}>
+ <section className={cubeLinksContainer}>
 
     {cubeElements.map(element => (
        <div key={element.name}>
@@ -22,7 +22,7 @@ console.log(cubeElements)
         {element.name === "lakowanie" && <LakowanieIcon className={cubeIcon}/>}
         <h3>{element.name}</h3><ArrowLink link={element.link} type="color"/></div>
        ))}
- </div>
+ </section>
   )
 }
 

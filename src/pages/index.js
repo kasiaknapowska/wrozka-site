@@ -15,6 +15,7 @@ import HigienaIcon from "../svg/higiena-icon.svg"
 import FluoryzacjaIcon from "../svg/fluoryzacja-icon.svg"
 import OzonowanieIcon from "../svg/ozonowanie-icon.svg"
 import LakowanieIcon from "../svg/lakowanie-icon.svg"
+import Movie from "../components/movie/Movie"
 
 const links = [
   {
@@ -169,6 +170,7 @@ const IndexPage = ({ data }) => (
       </ol>
     </div>
     <GallerySlider gallery={data.gallery} />
+    <Movie/>
     <div className="container">
       <ul className={styles.list}>
         {links.map(link => (
