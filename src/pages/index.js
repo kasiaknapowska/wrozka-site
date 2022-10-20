@@ -11,10 +11,6 @@ import GallerySlider from "../components/gallerySlider/GallerySlider"
 import * as styles from "../components/index.module.css"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
 
-import HigienaIcon from "../svg/higiena-icon.svg"
-import FluoryzacjaIcon from "../svg/fluoryzacja-icon.svg"
-import OzonowanieIcon from "../svg/ozonowanie-icon.svg"
-import LakowanieIcon from "../svg/lakowanie-icon.svg"
 import Movie from "../components/movie/Movie"
 
 const links = [
@@ -170,7 +166,7 @@ const IndexPage = ({ data }) => (
       </ol>
     </div>
     <GallerySlider gallery={data.gallery} />
-    <Movie/>
+    <Movie src="https://www.youtube.com/embed/81rHrMgRN2E"/>
     <div className="container">
       <ul className={styles.list}>
         {links.map(link => (

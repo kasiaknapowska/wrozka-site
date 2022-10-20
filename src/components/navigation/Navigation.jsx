@@ -3,7 +3,7 @@ import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { navLinks } from "../../data/navLinks"
+import { navLinks } from "../../data/links"
 
 import SocialMedia from "../socialMedia/SocialMedia"
 
@@ -53,11 +53,11 @@ const Navigation = ({ navigationType }) => {
               >
                 {link.text}
               </Link>
-              {i !== navLinks.length - 1}
+              {/* {i !== navLinks.length - 1} */}
             </React.Fragment>
           ))}
           <br />
-          <SocialMedia />
+          <SocialMedia type="side"/>
         </nav>
       </div>
       

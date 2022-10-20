@@ -1,16 +1,21 @@
 :root {
   --border-radius: 2rem;
-  --border-radius-s: .5rem;
+  --border-radius-s: 0.5rem;
   --color-text: #343434;
-  --color-primary: #F27BA6;
-  --color-secondary: #55ABA7;
-  --color-accent-1: #0080BD;
-  --color-accent-2: #C07BC4;
-  --color-neutral-light: #CECECE;
-  --color-gradient: linear-gradient(235deg, rgba(242,123,166,1) 0%, rgba(119,128,205,1) 70%, rgba(0,128,189,1) 100%);
+  --color-primary: #f27ba6;
+  --color-secondary: #55aba7;
+  --color-accent-1: #0080bd;
+  --color-accent-2: #c07bc4;
+  --color-neutral-light: #cecece;
+  --color-gradient: linear-gradient(
+    235deg,
+    rgba(242, 123, 166, 1) 0%,
+    rgba(119, 128, 205, 1) 70%,
+    rgba(0, 128, 189, 1) 100%
+  );
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-web: 'Nunito', sans-serif;
+  --font-web: "Nunito", sans-serif;
   --font-xxlg: 2.75rem;
   --font-xlg: 2rem;
   --font-lg: 1.5rem;
@@ -160,12 +165,7 @@ p *:last-child {
 li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
-p {
 
-  margin: 0 auto;
-  font-size: var(--font-sm);
-  margin-bottom: var(--space-4);
-}
 code {
   font-size: 0.875rem;
 }
@@ -210,9 +210,7 @@ pre tt:after {
   content: none;
 }
 
-
 /* site custom styles */
-
 
 h1 {
   margin: 0;
@@ -245,19 +243,23 @@ h4 {
   font-weight: 400;
 }
 @media screen and (min-width: 450px) {
- h1 {
-  font-size: var(--font-xlg);
- }
+  h1 {
+    font-size: var(--font-xlg);
+  }
 }
 @media screen and (min-width: 800px) {
   h1 {
-   font-size: var(--font-xxlg);
+    font-size: var(--font-xxlg);
   }
- }
+}
 h1 > b {
   color: var(--color-primary);
 }
-
+p {
+  margin: 0 auto;
+  font-size: var(--font-sm);
+  margin-bottom: var(--space-4);
+}
 a {
   background-color: transparent;
   color: var(--color-text);
@@ -277,12 +279,12 @@ a:hover {
 ul li {
   position: relative;
   left: -1.5rem;
-  background: url('../assets/bullet.png') no-repeat top left;
+  background: url("../assets/bullet.png") no-repeat top left;
   padding: 0 0 0 2.25rem;
   list-style: none;
-  background-size: .8rem;
+  background-size: 0.8rem;
   background-repeat: no-repeat;
-  background-position: 0 .3rem;
+  background-position: 0 0.3rem;
 }
 
 ol {
@@ -303,8 +305,8 @@ ol li::before {
   margin-right: var(--space-3);
   line-height: 0;
   font-family: var(--font-web);
- position: relative;
- top: .75rem;
+  position: relative;
+  top: 0.75rem;
 }
 
 .container {
@@ -321,16 +323,18 @@ ol li::before {
   .containerS {
     max-width: 700px;
   }
+}
+@media screen and (min-width: 1200px) {
   .container {
     max-width: var(--size-content);
   }
 }
-
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .btn {
   padding: var(--space-3) var(--space-4);
   text-transform: uppercase;
@@ -345,18 +349,16 @@ ol li::before {
 }
 
 .btnPrimary {
-background-color: var(--color-secondary);
-border-color: var(--color-secondary);
-color: white;
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
 }
 .btnSecondary {
   color: white;
-  }
+}
 .heroBtn {
   margin: var(--space-2);
 }
-
-
 
 footer {
   background-color: var(--color-secondary);

@@ -50,3 +50,8 @@
     flex-shrink: 0;
   }
 }
+.smIconsFooter {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}

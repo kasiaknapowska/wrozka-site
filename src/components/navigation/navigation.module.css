@@ -62,7 +62,7 @@
   cursor: pointer;
   z-index: 4;
 }
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 900px) {
   .hamburger {
     display: none;
   }

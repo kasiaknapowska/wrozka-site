@@ -9,6 +9,7 @@ import IconYT from "../../svg/icon-yt.svg"
 import {
   smIcon,
   smIcons,
+  smIconsFooter
 } from "./socialMedia.module.css"
 
 import "./socialMedia.module.css"
@@ -16,7 +17,7 @@ import "./socialMedia.module.css"
 const SocialMedia = ({ type }) => {
 
   return (
-    <div className={smIcons}>
+    <div className={`${type === "side" && smIcons} ${type === "footer" && smIconsFooter}`}>
     <a href="https://pl-pl.facebook.com/" target="blank">
       <IconFB className={smIcon} />
     </a>
