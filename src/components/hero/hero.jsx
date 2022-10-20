@@ -20,7 +20,7 @@ const Hero = ({ hero, location }) => {
   const { type, title, description } = hero
 
   return (
-    <div className={type === "main" && heroBg}>
+    <div className={type === "main" ? heroBg : undefined}>
       {/* <StaticImage
       src="../images/logo-color.svg"
       loading="eager"
@@ -31,8 +31,8 @@ const Hero = ({ hero, location }) => {
       style={{ marginBottom: `var(--space-3)` }}
        /> */}
       <div
-        className={`${heroContent} ${type === "main" && heroMain} ${
-          type === "page" && heroPage
+        className={`${heroContent} ${type === "main" ? heroMain : undefined} ${
+          type === "page" ? heroPage : undefined
         }`}
       >
         <Navigation navigationType={type} location={location}/>

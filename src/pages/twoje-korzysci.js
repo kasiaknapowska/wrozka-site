@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
+import Movie from "../components/movie/Movie"
 
 const TwojeKorzysci = ({ location }) => (
   <Layout>
@@ -16,6 +17,7 @@ const TwojeKorzysci = ({ location }) => (
       }}
       location={location.pathname}
     />
+    <Movie src="https://youtube.com/embed/fR8TBCx66dA"/>
     <div className="containerS">
       <h2>Dlaczego warto leczyć zęby mleczne? </h2>
       <h3>

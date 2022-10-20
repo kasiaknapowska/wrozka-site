@@ -4,7 +4,7 @@
     padding-bottom: 75%;
     position: relative;
     width: 100%;
-    margin: calc(var(--size-gap) * 2) 0;
+    margin: var(--size-gap) 0;
 }
 @media screen and (min-width: 1080px) {
   .movie {
