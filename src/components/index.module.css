@@ -40,11 +40,7 @@
   margin-top: var(--size-gap);
 }
 
-.listItem {
-  margin: 0;
-}
-
-.listItem::marker {
+/* .listItem::marker {
   color: #e95800;
 }
 
@@ -58,19 +54,5 @@
 
 .listItem:nth-child(4)::marker {
   color: #663399;
-}
+} */
 
-.listItemLink {
-  color: var(--color-primary);
-  font-weight: bold;
-}
-
-.listItemDescription {
-  color: var(--color-text);
-  margin-bottom: 0;
-  margin-top: var(--space-1);
-}
-
-.textCenter {
-  text-align: center;
-}

@@ -60,8 +60,8 @@ Hero.propTypes = {
   location: PropTypes.string,
 }
 
-// Hero.defaultProps = {
-//   hero: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
-// }
+Hero.defaultProps = {
+  hero: {type: "page", title: "", description: ""},
+}
 
 export default Hero

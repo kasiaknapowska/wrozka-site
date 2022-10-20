@@ -34,6 +34,7 @@
 .contact {
     display: flex;
     margin: var(--space-3) 0;
+    align-items: center;
 }
 .contact > p {
     margin: 0 0 0 var(--space-3);

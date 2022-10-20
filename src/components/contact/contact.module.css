@@ -1,0 +1,17 @@
+.contactContainer {
+    width: 100%;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    margin: var(--space-3) 0;
+}
+.contact > p {
+    margin: 0 0 0 var(--space-3);
+}
+
+@media screen and (min-width: 900px) {
+    .contactContainer {
+        width: 50%;
+    }
+}

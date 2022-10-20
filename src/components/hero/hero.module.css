@@ -84,6 +84,9 @@
   color: var(--color-primary);
   text-align: center;
 }
+div.heroText {
+  padding-top: var(--size-gutter);
+}
 .heroText > p {
   margin-bottom: var(--space-5);
   max-width: 700px;

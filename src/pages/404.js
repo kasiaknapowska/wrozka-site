@@ -2,11 +2,16 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ArrowLink from "../components/arrowLink/ArrowLink"
+import Icon404 from "../svg/icon-404.svg"
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section className="notFoundContainer">
+    <div className="notFound"><h1>404</h1><Icon404/></div>
+    <p>Ups... Strona, której szukasz, nie istnieje...</p>
+    <ArrowLink text="Przejdź do strony głównej" to="/">WRÓĆ DO STRONY GŁÓWNEJ</ArrowLink>
+    </section>
   </Layout>
 )
 

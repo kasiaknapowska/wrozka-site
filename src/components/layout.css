@@ -30,7 +30,7 @@
   --space-3: 1rem;
   --space-4: 1.5rem;
   --space-5: 2rem;
-  --space-6: 4rem;
+  --space-6: 3rem;
   --size-content: 1080px;
   --size-gutter: var(--space-4);
   --size-gap: var(--space-6);
@@ -307,7 +307,7 @@ ol li::before {
 .container {
   margin: 0 auto;
   max-width: 90%;
-  padding: var(--size-gutter) 0;
+  padding: var(--size-gap) 0;
 }
 .containerS {
   margin: 0 auto;
@@ -328,6 +328,7 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -355,9 +356,40 @@ ol li::before {
   margin: var(--space-2);
 }
 
+.notFoundContainer {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: calc(var(--size-gap) * 2) auto;
+}
+.notFound {
+  position: relative;
+}
+.notFound h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  }
+  .notFound svg {
+    width: 5rem;
+    position: absolute;
+    top: -2rem;
+    right: -3rem;
+  }
+@media screen and (min-width: 600px) {
+  .notFound h1 {
+    font-size: 10rem;
+    }
+  .notFound svg {
+    width: 9rem;
+    top: -4rem;
+    right: -5rem;
+  }
+}
 footer {
+  margin-top: var(--size-gap);
   background-color: var(--color-secondary);
   color: white;
-  margin-top: var(--space-5);
   font-size: var(--font-sx);
 }

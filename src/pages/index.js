@@ -8,10 +8,11 @@ import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import Halfs from "../components/halfs/Halfs"
 import GallerySlider from "../components/gallerySlider/GallerySlider"
-import * as styles from "../components/index.module.css"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
-
 import Movie from "../components/movie/Movie"
+import Contact from "../components/contact/Contact"
+
+import * as styles from "../components/index.module.css"
 
 const links = [
   {
@@ -75,10 +76,10 @@ const moreLinks = [
 ]
 
 const cubeElements = [
-  {name: 'higiena', link: 'profilaktyka/higiena'},
-  {name: 'fluoryzacja', link: 'profilaktyka/fluoryzacja'},
-  {name: 'ozonowanie', link: 'profilaktyka/ozonowanie'},
-  {name: 'lakowanie', link: 'profilaktyka/lakowanie'},
+  { name: "higiena", link: "profilaktyka/higiena" },
+  { name: "fluoryzacja", link: "profilaktyka/fluoryzacja" },
+  { name: "ozonowanie", link: "profilaktyka/ozonowanie" },
+  { name: "lakowanie", link: "profilaktyka/lakowanie" },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -139,7 +140,7 @@ const IndexPage = ({ data, location }) => (
 
       <button className="btn btnPrimary">Umów wizytę</button>
     </div>
-    <CubeLinks cubeElements={cubeElements}/>
+    <CubeLinks cubeElements={cubeElements} />
     <div className="containerS">
       <h2>Zęby bez próchnicy</h2>
       <h3>
@@ -166,18 +167,21 @@ const IndexPage = ({ data, location }) => (
       </ol>
     </div>
     <GallerySlider gallery={data.gallery} />
-    <Movie src="https://www.youtube.com/embed/81rHrMgRN2E"/>
-    <div className="container">
+    <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" />
+    <section className="container flex">
+      <Contact/>
+    <div>Formularz</div>
+    </section>
+    {/* <div className="container">
       <ul className={styles.list}>
         {links.map(link => (
-          <li key={link.url} className={styles.listItem}>
+          <li key={link.url}>
             <a
-              className={styles.listItemLink}
               href={`${link.url}${utmParameters}`}
             >
               {link.text} ↗
             </a>
-            <p className={styles.listItemDescription}>{link.description}</p>
+            <p >{link.description}</p>
           </li>
         ))}
       </ul>
@@ -187,7 +191,7 @@ const IndexPage = ({ data, location }) => (
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
-    </div>
+    </div> */}
   </Layout>
 )
 
