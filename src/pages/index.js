@@ -83,7 +83,7 @@ const cubeElements = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data, location }) => (
   <Layout>
     <Seo title="Home" />
     <Hero

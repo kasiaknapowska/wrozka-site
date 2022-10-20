@@ -218,7 +218,7 @@ h1 {
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01rem;
-  font-size: var(--font-lg);
+  font-size: var(--font-xlg);
 }
 h2 {
   font-size: var(--font-xlg);
@@ -241,11 +241,6 @@ h4 {
   font-size: var(--font-lg);
   letter-spacing: -0.01em;
   font-weight: 400;
-}
-@media screen and (min-width: 450px) {
-  h1 {
-    font-size: var(--font-xlg);
-  }
 }
 @media screen and (min-width: 800px) {
   h1 {

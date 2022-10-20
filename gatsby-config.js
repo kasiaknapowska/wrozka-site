@@ -4,7 +4,7 @@ module.exports = {
     description: `Stomatologia dziecięca Katowice`,
     author: `@KKnapowska`,
     image: `/logo-wz-512.png`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`, //docelowa domena wróżki zębuszki
+    siteUrl: `https://http://localhost:8000/`, //docelowa domena wróżki zębuszki
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -7,6 +7,7 @@
 .navPage {
   color: var(--color-text);
 }
+
 @media screen and (max-width: 900px) {
   .heroNav {
     display: none;
@@ -33,13 +34,22 @@
   padding-left: 0;
   font-size: 1.25rem;
   margin: var(--space-4) 0;
+  color: white;
 }
 .heroNavMobile a:hover {
   text-decoration: none;
 }
-.heroNavLink a {
-  font-size: var(--font-sm);
+
+.navPage:hover {
+  text-decoration-color: var(--color-secondary) !important;
 }
+.active {
+  text-decoration: underline;
+  text-decoration-color: var(--color-secondary);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+
 @media screen and (min-width: 900px) {
   .heroNavLink:not(a:first-child) {
     padding-left: 1.4rem;
@@ -120,4 +130,10 @@
   top: 0.8rem;
   width: 0%;
   left: 50%;
+}
+.hamburgerPage span {
+  background: var(--color-primary);
+}
+.hamburgerPage.open span {
+  background: white;
 }

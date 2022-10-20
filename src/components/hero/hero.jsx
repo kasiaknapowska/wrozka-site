@@ -14,12 +14,13 @@ import {
   arrow,
 } from "./hero.module.css"
 import Navigation from "../navigation/Navigation"
+import ArrowLink from "../arrowLink/ArrowLink"
 
-const Hero = ({ hero }) => {
+const Hero = ({ hero, location }) => {
   const { type, title, description } = hero
 
   return (
-    <div className={heroBg}>
+    <div className={type === "main" && heroBg}>
       {/* <StaticImage
       src="../images/logo-color.svg"
       loading="eager"
@@ -34,14 +35,21 @@ const Hero = ({ hero }) => {
           type === "page" && heroPage
         }`}
       >
-        <Navigation navigationType={type}/>
+        <Navigation navigationType={type} location={location}/>
         <div className={`container ${heroText}`}>
           <h1>{title}</h1>
           <p>{description}</p>
-          <button className="btn btnPrimary heroBtn">Umów wizytę</button>
-          <button className="btn btnSecondary heroBtn">Dowiedz się więcej</button>
+          {type === "main" && (
+            <>
+              <button className="btn btnPrimary heroBtn">Umów wizytę</button>
+              <button className="btn btnSecondary heroBtn">
+                Dowiedz się więcej
+              </button>
+            </>
+          )}
+          {type === "page" && <ArrowLink link="kontakt" text="Zapytaj o szczegóły"/>}
         </div>
-        <Arrow className={arrow} />
+        {type === "main" && <Arrow className={arrow} />}
       </div>
     </div>
   )
@@ -49,6 +57,7 @@ const Hero = ({ hero }) => {
 
 Hero.propTypes = {
   hero: PropTypes.object,
+  location: PropTypes.string,
 }
 
 // Hero.defaultProps = {

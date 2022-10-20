@@ -75,9 +75,18 @@
 .heroPage {
   color: var(--color-text);
 }
+.heroPage .heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heroPage h1 {
+  color: var(--color-primary);
+  text-align: center;
+}
 .heroText > p {
   margin-bottom: var(--space-5);
-  max-width: 680px;
+  max-width: 700px;
 }
 
 .arrow {

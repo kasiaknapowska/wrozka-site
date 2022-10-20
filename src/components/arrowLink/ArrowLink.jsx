@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 
 import { arrow, linkContainer, color } from "./arrowLink.module.css"
 
-const ArrowLink = ({ link, type }) => {
+const ArrowLink = ({ link, type, text }) => {
   return (
     <div className={`${linkContainer} ${type.includes("color") && color}`}>
       {" "}
-      <Link to={`/${link}`}>Więcej</Link>
+      <Link to={`/${link}`}>{text}</Link>
       <div className={arrow}>
         <div></div>
         <div></div>
@@ -18,11 +18,15 @@ const ArrowLink = ({ link, type }) => {
 }
 
 ArrowLink.propTypes = {
-  color: PropTypes.string,
+  link: PropTypes.string,
+  type: PropTypes.string,
+  text: PropTypes.string,
 }
 
-// Hero.defaultProps = {
-//   heroType: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
-// }
+ArrowLink.defaultProps = {
+  link: "",
+  type: "standard",
+  text: "Więcej",
+}
 
 export default ArrowLink

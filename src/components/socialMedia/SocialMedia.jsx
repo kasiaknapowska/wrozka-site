@@ -18,13 +18,13 @@ const SocialMedia = ({ type }) => {
 
   return (
     <div className={`${type === "side" && smIcons} ${type === "footer" && smIconsFooter}`}>
-    <a href="https://pl-pl.facebook.com/" target="blank">
+    <a href="https://pl-pl.facebook.com/" target="blank" rel="noopener noreferrer">
       <IconFB className={smIcon} />
     </a>
-    <a href="https://www.instagram.com/" target="blank">
+    <a href="https://www.instagram.com/" target="blank" rel="noopener noreferrer">
       <IconInsta className={smIcon} />
     </a>
-    <a href="https://www.youtube.com/" target="blank">
+    <a href="https://www.youtube.com/" target="blank" rel="noopener noreferrer">
       <IconYT className={smIcon} />
     </a>
   </div>
