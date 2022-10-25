@@ -98,6 +98,11 @@ div.heroText {
   margin-top: 2rem;
   max-width: 2.5rem;
 }
+@media screen and (max-width: 420px) {
+  .arrow {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
   .arrow {
     max-width: 2rem;

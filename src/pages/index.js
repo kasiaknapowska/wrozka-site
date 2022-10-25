@@ -11,6 +11,7 @@ import GallerySlider from "../components/gallerySlider/GallerySlider"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
 import Movie from "../components/movie/Movie"
 import Contact from "../components/contact/Contact"
+import Form from "../components/Form/Form"
 
 import * as styles from "../components/index.module.css"
 
@@ -168,9 +169,9 @@ const IndexPage = ({ data, location }) => (
     </div>
     <GallerySlider gallery={data.gallery} />
     <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" />
-    <section className="container flex">
+    <section className={`container contactFlex`}>
       <Contact/>
-    <div>Formularz</div>
+      <Form/>
     </section>
     {/* <div className="container">
       <ul className={styles.list}>
