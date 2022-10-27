@@ -394,7 +394,7 @@ ol li::before {
   gap: var(--size-gap);
 }
 footer {
-  margin-top: var(--size-gap);
+  /* margin-top: var(--size-gap) */
   background-color: var(--color-secondary);
   color: white;
   font-size: var(--font-sx);
@@ -408,7 +408,7 @@ form {
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  form {
+  form:not(.contactPageForm) {
       width: calc(50% - var(--size-gap));
   }
 }

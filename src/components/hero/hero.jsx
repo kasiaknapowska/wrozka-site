@@ -35,20 +35,24 @@ const Hero = ({ hero, location }) => {
           type === "page" ? heroPage : undefined
         }`}
       >
-        <Navigation navigationType={type} location={location}/>
-        <div className={`container ${heroText}`}>
-          <h1>{title}</h1>
-          <p>{description}</p>
-          {type === "main" && (
-            <>
-              <button className="btn btnPrimary heroBtn">Umów wizytę</button>
-              <button className="btn btnSecondary heroBtn">
-                Dowiedz się więcej
-              </button>
-            </>
-          )}
-          {type === "page" && <ArrowLink link="kontakt" text="Zapytaj o szczegóły"/>}
-        </div>
+        <Navigation navigationType={type} location={location} />
+        {type !== "contact" && (
+          <div className={`container ${heroText}`}>
+            <h1>{title}</h1>
+            <p>{description}</p>
+            {type === "main" && (
+              <>
+                <button className="btn btnPrimary heroBtn">Umów wizytę</button>
+                <button className="btn btnSecondary heroBtn">
+                  Dowiedz się więcej
+                </button>
+              </>
+            )}
+            {type === "page" && (
+              <ArrowLink link="kontakt" text="Zapytaj o szczegóły" />
+            )}
+          </div>
+        )}
         {type === "main" && <Arrow className={arrow} />}
       </div>
     </div>
@@ -61,7 +65,7 @@ Hero.propTypes = {
 }
 
 Hero.defaultProps = {
-  hero: {type: "page", title: "", description: ""},
+  hero: { type: "page", title: "", description: "" },
 }
 
 export default Hero

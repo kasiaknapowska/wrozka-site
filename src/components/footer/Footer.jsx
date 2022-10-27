@@ -7,8 +7,8 @@ import { footerLinks } from "../../data/links"
 import SocialMedia from "../socialMedia/SocialMedia"
 
 import IconStars from "../../svg/icon-stars.svg"
-import IconMail from "../../svg/icon-mail.svg"
-import IconPhone from "../../svg/icon-phone.svg"
+import IconMail from "../../svg/icon-mail-white.svg"
+import IconPhone from "../../svg/icon-phone-white.svg"
 import {
   footerTop,
   footerBottom,

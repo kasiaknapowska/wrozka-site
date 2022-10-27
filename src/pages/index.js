@@ -11,7 +11,7 @@ import GallerySlider from "../components/gallerySlider/GallerySlider"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
 import Movie from "../components/movie/Movie"
 import Contact from "../components/contact/Contact"
-import Form from "../components/Form/Form"
+import Form from "../components/form/Form"
 
 import * as styles from "../components/index.module.css"
 

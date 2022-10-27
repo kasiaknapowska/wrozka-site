@@ -1,3 +1,71 @@
+.contactPageSectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+.contactDataContainer {
+  background-color: var(--color-secondary);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-gap) 5vw;
+}
+.mapFrame {
+  border: 0;
+  max-height: 70vh;
+}
+.formSectionContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(2* var(--size-gap)) 0;
+}
+.formContainer {
+  z-index: 10;
+  background-color: white;
+  padding: var(--space-4);
+}
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+}
+.backgroundImage::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: var(--color-gradient);
+  background-size: 300% 300%;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+}
+@media screen and (min-width: 600px) {
+  .formContainer {
+    padding: var(--size-gap);
+   }
+}
+
+@media screen and (min-width: 1080px) {
+  .contactPageSectionContainer {
+    flex-direction: row;
+  }
+ .contactDataContainer {
+  width: 50vw;
+  max-height: 70vh;
+  padding: var(--size-gap) calc(2 * var(--size-gap));
+ }
+ .mapFrame {
+  max-width: 50vw;
+ }
+
+}
+
+
 /* .list {
   display: grid;
   margin: 0;
@@ -55,4 +123,6 @@
 .listItem:nth-child(4)::marker {
   color: #663399;
 } */
+
+
 

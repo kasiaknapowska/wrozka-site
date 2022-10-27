@@ -19,7 +19,7 @@ import {
   hamburgerPage,
   open,
   heroNavMobile,
-  active
+  active,
 } from "./navigation.module.css"
 
 const Navigation = ({ navigationType, location }) => {
@@ -34,9 +34,10 @@ const Navigation = ({ navigationType, location }) => {
         )}
       </Link>
       <div
+        role="presentation"
         onClick={() => setIsOpen(!isOpen)}
         className={`${hamburger} ${isOpen && open} ${
-          navigationType === "page" && hamburgerPage
+          navigationType === "page" || navigationType === "contact" ? hamburgerPage : ""
         }`}
       >
         <span></span>
@@ -51,7 +52,7 @@ const Navigation = ({ navigationType, location }) => {
               to={`/${link.url}`}
               className={`${heroNavLink} ${
                 navigationType === "main" && navMain
-              } ${navigationType === "page" && navPage}
+              } ${navigationType === "page" || navigationType === "contact" ? navPage : ""}
               ${location === `/${link.url}` && active}`}
             >
               {link.text}

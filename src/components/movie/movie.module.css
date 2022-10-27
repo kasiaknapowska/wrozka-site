@@ -15,7 +15,7 @@
     align-items: center;
   }
 }
-iframe {
+iframe.movieFrame {
     height: 100%;
     width: 100%;
     left: 0;
@@ -36,7 +36,7 @@ iframe {
 } */
 
 @media screen and (min-width: 1080px) {
-    iframe {
+    iframe.movieFrame {
         width: var(--size-content);
         height: 80vh;
         position: static;

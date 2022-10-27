@@ -2,12 +2,14 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { movie } from "./movie.module.css"
+import { movie, movieFrame } from "./movie.module.css"
 
 const Movie = ({ src }) => {
   return (
     <section className={movie}>
       <iframe
+        className={movieFrame}
+        title="movie"
         width="1080"
         height="700"
         src={src}

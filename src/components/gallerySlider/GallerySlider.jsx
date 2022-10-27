@@ -50,10 +50,10 @@ const GallerySlider = ({ gallery }) => {
   }
 
   return (
-    <section className={galleryContainer}>
+    <section className={galleryContainer} >
       <div className={sliderNav}>
-      <div onClick={goToPrevious}></div>
-      <div onClick={goToNext}></div>
+      <div role="presentation" onClick={goToPrevious}></div>
+      <div role="presentation" onClick={goToNext}></div>
       </div>
       <GatsbyImage
         className={galleryImg}

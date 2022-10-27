@@ -5,12 +5,17 @@ import { Link } from "gatsby"
 import IconMailColor from "../../svg/icon-mail-color.svg"
 import IconPhoneColor from "../../svg/icon-phone-color.svg"
 import IconHomeColor from "../../svg/icon-home-color.svg"
+import IconMailWhite from "../../svg/icon-mail-white.svg"
+import IconPhoneWhite from "../../svg/icon-phone-white.svg"
+import IconHomeWhite from "../../svg/icon-home-white.svg"
 
-import { contactContainer, contact } from "./contact.module.css"
+import { contactData } from "../../data/contactData"
 
-const Contact = ({ contactData }) => {
+import { contactContainer, contactPageContainer, contact } from "./contact.module.css"
+
+const Contact = ({type}) => {
   return (
-    <div className={contactContainer}>
+    <div className={type === "contactPage" ? contactPageContainer : contactContainer}>
       <h2>Skontaktuj się z nami</h2>
       <h3>
         Masz pytania lub wątpliwości? Zadzwoń do nas lub wypełnij formularz.
@@ -18,15 +23,15 @@ const Contact = ({ contactData }) => {
       </h3>
       <h3>Wróżka Zębuszka Klinika Stomatologii Dziecięcej</h3>
       <div className={contact}>
-        <IconHomeColor />
+        {type === "contactPage" ? <IconHomeWhite/> : <IconHomeColor />}
         <p>{contactData.address}</p>
       </div>
       <div className={contact}>
-        <IconMailColor />
+        {type === "contactPage" ? <IconMailWhite/> : <IconMailColor />}
         <p>{contactData.email}</p>
       </div>
       <div className={contact}>
-        <IconPhoneColor />
+      {type === "contactPage" ? <IconPhoneWhite/> : <IconPhoneColor />}
         <p>{contactData.phone}</p>
       </div>
     </div>

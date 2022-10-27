@@ -22,7 +22,7 @@ const Halfs = ({ data, type, video, title, description }) => {
   return (
     <section
       className={`${halfsContainer} ${
-        type.includes("standard") ? standard : reverse
+        type.includes("standard") ? "" : reverse
       }  ${type.includes("color") && color}`}
     >
       {/* <StaticImage

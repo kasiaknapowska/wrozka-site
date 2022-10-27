@@ -15,3 +15,7 @@
         width: 50%;
     }
 }
+
+.contactPageContainer h3, .contactPageContainer h2, .contactPageContainer p {
+    color: white;
+}
