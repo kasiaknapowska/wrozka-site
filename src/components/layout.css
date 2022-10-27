@@ -329,7 +329,6 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 }
 .btn {
   padding: var(--space-3) var(--space-4);
@@ -371,17 +370,17 @@ ol li::before {
   font-size: 5rem;
   font-weight: 900;
   color: var(--color-primary);
-  }
-  .notFound svg {
-    width: 5rem;
-    position: absolute;
-    top: -2rem;
-    right: -3rem;
-  }
+}
+.notFound svg {
+  width: 5rem;
+  position: absolute;
+  top: -2rem;
+  right: -3rem;
+}
 @media screen and (min-width: 600px) {
   .notFound h1 {
     font-size: 10rem;
-    }
+  }
   .notFound svg {
     width: 9rem;
     top: -4rem;
@@ -409,16 +408,18 @@ form {
 }
 @media screen and (min-width: 900px) {
   form:not(.contactPageForm) {
-      width: calc(50% - var(--size-gap));
+    width: calc(50% - var(--size-gap));
   }
 }
-label {
+label,
+legend {
   text-transform: uppercase;
   font-size: var(--font-sx);
   color: var(--color-neutral);
 }
 
-input, textarea {
+input,
+textarea {
   border: 1px solid var(--color-neutral-light);
   outline: none;
   color: var(--color-neutral);
@@ -426,6 +427,7 @@ input, textarea {
   font-family: var(--font-sans);
   margin-top: var(--space-1);
   margin-bottom: var(--space-3);
+  background-color: transparent;
 }
 input {
   height: 2.5rem;
@@ -439,7 +441,8 @@ textarea {
   resize: none;
   display: block;
 }
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--color-neutral-light);
   font-size: var(--font-sx);
   font-family: var(--font-sans);
@@ -447,29 +450,44 @@ input::placeholder, textarea::placeholder {
 label:focus-within {
   color: var(--color-primary);
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--color-primary);
 }
-.checkbox > div {
+input[type="date"] {
+  color: var(--color-neutral-light);
+  text-transform: uppercase;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.checkbox > div,
+.radio > div {
   font-size: var(--font-sx);
   text-transform: initial;
 }
-.checkbox:focus-within {
+.checkbox:focus-within,
+.radio:focus-within {
   color: var(--color-neutral);
 }
-.checkbox input {
+.checkbox input,
+.radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
-  width: 0; 
+  width: 0;
 }
-.checkbox {
+.checkbox,
+.radio {
   cursor: pointer;
   display: flex;
-
-  }
-.checkbox span {
+}
+.checkbox span,
+.radio span {
   width: var(--space-3);
   height: var(--space-3);
   flex-shrink: 0;
@@ -480,17 +498,35 @@ input:focus, textarea:focus {
   margin-right: var(--space-3);
   margin-top: 3px;
 }
+.radio span {
+  border-radius: 50%;
+}
 
-.checkbox input:checked + span {
+.checkbox input:checked + span,
+.radio input:checked + span {
   background-color: var(--color-primary);
 }
 span.errorMessage {
-color: var(--color-alert);
-display: inline-block;
-border: none;
-width: auto;
-text-transform: uppercase;
-font-weight: 600;
-margin: 0;
+  color: var(--color-alert);
+  display: inline-block;
+  border: none;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-gap);
+  row-gap: var(--space-3);
+}
+fieldset > label {
+  width: 6rem;
+}
+legend {
+  margin-bottom: var(--space-2);
 }
 /* FORM STYLES END */

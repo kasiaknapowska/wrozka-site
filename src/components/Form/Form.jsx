@@ -44,24 +44,29 @@ const Form = ({ type }) => {
           />
         </label>
         {type === "contact" ? (
-         <div style={{display: "flex", alignItems: "flex-end", justifyContent: "space-between"}}>
-          <label style={{ width: "90%" }}>
-            Data urodzenia (opcjonalnie)
-              <input
-                placeholder="DD / MM / RRRR"
-                {...register("birth")}
-              />
-            
-          </label>
-           <CalendarIcon
-                style={{
-                  maxWidth: "2.5rem",
-                  position: "relative",
-                  bottom: ".75rem",
-                  marginLeft: ".5rem"
-                }}
-              /> 
-         </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              position: "relative",
+            }}
+          >
+            <label style={{ width: "100%" }}>
+              Data urodzenia (opcjonalnie)
+              <input type="date" min="2004-11-01" {...register("birth")} />
+            </label>
+            <CalendarIcon
+              style={{
+                maxWidth: "2.5rem",
+                position: "absolute",
+                bottom: ".7rem",
+                right: "0.5rem",
+                zIndex: "-1",
+                width: "2rem",
+              }}
+            />
+          </div>
         ) : undefined}
         <label>
           Telefon * &nbsp;&nbsp;
@@ -103,6 +108,43 @@ const Form = ({ type }) => {
             aria-invalid={errors.mail ? "true" : "false"}
           />
         </label>
+
+        {type === "contact" ? (
+          <fieldset>
+            <legend>Rodzaj wizyty (opcjonalnie)</legend>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="konsultacja" />
+              <span></span>
+              <div>Konsultacja</div>
+            </label>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="ból zęba" />
+              <span></span>
+              <div>Ból zęba</div>
+            </label>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="profilaktyka" />
+              <span></span>
+              <div>Profilaktyka</div>
+            </label>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="kontrola" />
+              <span></span>
+              <div>Kontrola</div>
+            </label>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="leczenie" />
+              <span></span>
+              <div>Leczenie</div>
+            </label>
+            <label className="radio">
+              <input type="radio" {...register("visit")} value="inne" />
+              <span></span>
+              <div>Inne</div>
+            </label>
+          </fieldset>
+        ) : undefined}
+
         <label>
           Treść wiadomości (opcjonalnie)
           <textarea
@@ -134,20 +176,22 @@ const Form = ({ type }) => {
         <label className="checkbox">
           <input
             type="checkbox"
-            {...register("data", {
+            {...register("personalData", {
               required: {
                 value: true,
                 message: "Zaznacz zgodę",
               },
             })}
-            aria-invalid={errors.data ? "true" : "false"}
+            aria-invalid={errors.personalData ? "true" : "false"}
           />
           <span></span>
           <div>
             Wyrażam zgodę na przetwarzanie moich danych osobowych.{" "}
             <Link to="/">Treść zgody.</Link> * &nbsp;&nbsp;{" "}
-            {errors.data && (
-              <span className="errorMessage">{errors.data?.message}</span>
+            {errors.personalData && (
+              <span className="errorMessage">
+                {errors.personalData?.message}
+              </span>
             )}
           </div>
         </label>

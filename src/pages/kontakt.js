@@ -10,7 +10,6 @@ import Contact from "../components/contact/Contact"
 
 import * as styles from "../components/index.module.css"
 
-
 const Kontakt = ({ location }) => {
   return (
     <Layout>
@@ -37,21 +36,20 @@ const Kontakt = ({ location }) => {
         ></iframe>
       </section>
       <section className={styles.formSectionContainer}>
-      <div className={`containerS ${styles.formContainer}`}>
-          <Form type="contact"/>
-      </div>
-      <StaticImage
-        src="../assets/wnetrza.jpg"
-        alt=""
-        className={styles.backgroundImage}
-        layout="fullWidth"
-        // loading="eager"
-        // width={240}
-        // quality={95}
-        // formats={["auto", "webp", "avif"]}
-        style={{ position: 'absolute' }}
-      />
-        
+        <div className={`containerS ${styles.formContainer}`}>
+          <Form type="contact" />
+        </div>
+        <StaticImage
+          src="../assets/wnetrza.jpg"
+          alt=""
+          className={styles.backgroundImage}
+          layout="fullWidth"
+          // loading="eager"
+          // width={240}
+          // quality={95}
+          // formats={["auto", "webp", "avif"]}
+          style={{ position: "absolute" }}
+        />
       </section>
     </Layout>
   )
