@@ -40,10 +40,17 @@
     margin: 0 0 0 var(--space-3);
 }
 .stars {
-    position: absolute;
-    top: -2rem;
-    left: 15rem;
+    display: none;
 }
+@media screen and (min-width: 370px) {
+    .stars {
+        display: block;
+        position: absolute;
+        top: -2rem;
+        left: 15rem;
+    }
+}
+
 .gatsbyLink {
     color: white;
     text-align: left;

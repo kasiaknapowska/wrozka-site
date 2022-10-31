@@ -32,14 +32,27 @@
 .heroBg {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/hero.jpg");
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
   text-align: center;
   position: relative;
 }
-.heroBg::after {
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.backgroundImage::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: var(--color-gradient);
+  background-size: 300% 300%;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+}
+/* .heroBg::after {
   content: "";
   width: 100%;
   height: 100vh;
@@ -51,7 +64,7 @@
   top: 0;
   left: 0;
   opacity: 50%;
-}
+} */
 
 @media screen and (min-width: 900px) {
   .heroBg {

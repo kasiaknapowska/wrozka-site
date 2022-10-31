@@ -243,19 +243,29 @@ h4 {
   letter-spacing: -0.01em;
   font-weight: 400;
 }
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: var(--font-lg);
+  }
+  h3 {
+    font-size: var(--font-sm);
+  }
+  p {
+    font-size: var(--font-sx);
+  }
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: var(--font-xxlg);
   }
 }
-h1 > b {
-  color: var(--color-primary);
-}
+
 p {
   margin: 0 auto;
   font-size: var(--font-sm);
   margin-bottom: var(--space-4);
 }
+
 a {
   background-color: transparent;
   color: var(--color-text);
@@ -349,51 +359,40 @@ ol li::before {
   border-color: var(--color-secondary);
   color: white;
 }
+.btnPrimary:hover {
+  background-color: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  transition: .5s;
+}
 .btnSecondary {
   color: white;
+}
+.btnSecondary:hover {
+  background-color: rgba(255, 255, 255, .1);
+  transition: .5s;
 }
 .heroBtn {
   margin: var(--space-2);
 }
 
-.notFoundContainer {
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: calc(var(--size-gap) * 2) auto;
-}
-.notFound {
-  position: relative;
-}
-.notFound h1 {
-  font-size: 5rem;
-  font-weight: 900;
-  color: var(--color-primary);
-}
-.notFound svg {
-  width: 5rem;
-  position: absolute;
-  top: -2rem;
-  right: -3rem;
-}
-@media screen and (min-width: 600px) {
-  .notFound h1 {
-    font-size: 10rem;
-  }
-  .notFound svg {
-    width: 9rem;
-    top: -4rem;
-    right: -5rem;
-  }
-}
 .contactFlex {
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-gap);
 }
+header {
+  display: none;
+  margin: 0 auto;
+  padding: var(--space-3) var(--size-gutter);
+}
+@media screen and (min-width: 900px) {
+    header {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
 footer {
-  /* margin-top: var(--size-gap) */
   background-color: var(--color-secondary);
   color: white;
   font-size: var(--font-sx);

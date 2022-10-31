@@ -5,13 +5,11 @@ import { Link } from "gatsby"
 
 import CalendarIcon from "../../svg/icon-calendar.svg"
 
-// import { } from "./form.module.css"
-
 const Form = ({ type }) => {
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm({ defaultValues: { privacy: false, data: false } })
 
@@ -61,9 +59,9 @@ const Form = ({ type }) => {
                 maxWidth: "2.5rem",
                 position: "absolute",
                 bottom: ".7rem",
-                right: "0.5rem",
+                right: "0.25rem",
                 zIndex: "-1",
-                width: "2rem",
+                width: "1.75rem",
               }}
             />
           </div>
@@ -199,19 +197,18 @@ const Form = ({ type }) => {
         <button className="btn btnPrimary" type="submit">
           Wyślij
         </button>
-        {errors && console.log(errors)}
-        {/* {errors && console.log(Object.values(errors).map(error => error.message))} */}
+        {/* {errors && console.log(errors)} */}
       </form>
     </>
   )
 }
 
-// Form.propTypes = {
-//   contactData: PropTypes.object,
-// }
+Form.propTypes = {
+  type: PropTypes.string,
+}
 
-// Form.defaultProps = {
-//   contactData: "",
-// }
+Form.defaultProps = {
+  type: "",
+}
 
 export default Form

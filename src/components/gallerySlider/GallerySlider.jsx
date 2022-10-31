@@ -1,14 +1,12 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { galleryContainer, galleryMainImg, galleryImg, sliderNav, fadeImg } from "./gallerySlider.module.css"
 
 const GallerySlider = ({ gallery }) => {
   const images = gallery.nodes.map(el => getImage(el))
-  console.log(images)
 
   const [previousIndex, setPreviousIndex] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(1)

@@ -1,8 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
+
+import Navigation from "../navigation/Navigation"
+import ArrowLink from "../arrowLink/ArrowLink"
 
 import Arrow from "../../svg/arrow.svg"
 import {
@@ -12,24 +14,25 @@ import {
   heroPage,
   heroText,
   arrow,
+  backgroundImage,
 } from "./hero.module.css"
-import Navigation from "../navigation/Navigation"
-import ArrowLink from "../arrowLink/ArrowLink"
 
 const Hero = ({ hero, location }) => {
   const { type, title, description } = hero
 
   return (
     <div className={type === "main" ? heroBg : undefined}>
-      {/* <StaticImage
-      src="../images/logo-color.svg"
-      loading="eager"
-      width={240}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="logo"
-      style={{ marginBottom: `var(--space-3)` }}
-       /> */}
+      {type === "main" ? (
+        <StaticImage
+          src="../../assets/hero.jpg"
+          alt=""
+          className={backgroundImage}
+          layout="fullWidth"
+          loading="eager"
+          quality={95}
+          formats={["auto", "webp", "avif"]}
+        />
+      ) : undefined}
       <div
         className={`${heroContent} ${type === "main" ? heroMain : undefined} ${
           type === "page" ? heroPage : undefined

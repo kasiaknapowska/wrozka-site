@@ -1,7 +1,7 @@
 .smIcons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .smIcons a {
   display: inline-block;
@@ -34,6 +34,7 @@
   .smIcons a:hover {
     opacity: 70%;
   }
+
   .smIcons a:first-child {
     background-color: var(--color-accent-1);
   }
@@ -43,6 +44,26 @@
   .smIcons a:last-child {
     background-color: var(--color-secondary);
   }
+
+  /* .smIcons a:first-child:hover::before {
+    background-color: var(--color-accent-1);
+  }
+  .smIcons a:nth-child(2):hover::before {
+    background-color: var(--color-primary);
+  }
+  .smIcons a:last-child:hover::before {
+    background-color: var(--color-secondary);
+  } */
+
+  /* .smIcons a:hover::before {
+    content: "";
+    width: 3.1rem;
+    height: 3rem;
+    position: absolute;
+    right: .1rem;
+    border-radius: var(--border-radius-s) 0 0 var(--border-radius-s);
+  } */
+
   .smIcon {
     margin: var(--space-3);
     max-width: 2rem;
@@ -53,5 +74,4 @@
 .smIconsFooter {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
 }

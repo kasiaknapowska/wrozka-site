@@ -1,3 +1,12 @@
+@keyframes text {
+  from {bottom: -3rem;}
+  to {bottom: 0;}
+}
+@keyframes image {
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
 .halfsContainer {
   width: 100%;
   display: flex;
@@ -35,4 +44,11 @@
 .color {
   color: white;
   background-color: var(--color-secondary);
+}
+.textAnimation {
+animation: text 1s ease-out;
+position: relative;
+}
+.imageAnimation {
+  animation: image 2s;
 }

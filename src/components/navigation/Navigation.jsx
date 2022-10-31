@@ -57,7 +57,6 @@ const Navigation = ({ navigationType, location }) => {
             >
               {link.text}
             </Link>
-            {/* {i !== navLinks.length - 1} */}
           </React.Fragment>
         ))}
         <br />

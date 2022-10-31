@@ -1,6 +1,4 @@
 import * as React from "react"
-import { useState } from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { footerLinks } from "../../data/links"
@@ -17,7 +15,7 @@ import {
   contactData,
   contact,
   gatsbyLink,
-  stars
+  stars,
 } from "./footer.module.css"
 
 const Footer = () => {
@@ -41,9 +39,11 @@ const Footer = () => {
             ))}
           </div>
           <div className={contactData}>
-            <h4>Skontaktuj się z nami <IconStars className={stars}/> </h4>
-            
-            <p>Wróżka Zębuszka Klinika Stomatologii Dziecięcej</p>
+            <h4>
+              Wróżka Zębuszka <IconStars className={stars} />{" "}
+            </h4>
+
+            <p>Klinika Stomatologii Dziecięcej</p>
             <div className={contact}>
               <IconMail />
               <p>recepcja@wrozkazebuszka.pl</p>
@@ -69,13 +69,5 @@ const Footer = () => {
     </footer>
   )
 }
-
-// Footer.propTypes = {
-//   prop: PropTypes.string,
-// }
-
-// Footer.defaultProps = {
-//   prop: "",
-// }
 
 export default Footer

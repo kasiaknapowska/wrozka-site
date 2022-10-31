@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -36,7 +35,7 @@ const Kontakt = ({ location }) => {
         ></iframe>
       </section>
       <section className={styles.formSectionContainer}>
-        <div className={`containerS ${styles.formContainer}`}>
+        <div className={`${styles.formContainer}`}>
           <Form type="contact" />
         </div>
         <StaticImage
@@ -44,11 +43,9 @@ const Kontakt = ({ location }) => {
           alt=""
           className={styles.backgroundImage}
           layout="fullWidth"
-          // loading="eager"
-          // width={240}
-          // quality={95}
-          // formats={["auto", "webp", "avif"]}
-          style={{ position: "absolute" }}
+          loading="eager"
+          quality={95}
+          formats={["auto", "webp", "avif"]}
         />
       </section>
     </Layout>

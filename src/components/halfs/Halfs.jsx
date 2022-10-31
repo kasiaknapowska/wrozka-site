@@ -1,50 +1,63 @@
 import * as React from "react"
-import { useState } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
-
-import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { useRef, useCallback } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import {
   halfsContainer,
-  standard,
   reverse,
   halfsContent,
   halfsImg,
   color,
+  textAnimation,
+  imageAnimation
 } from "./halfs.module.css"
 import ArrowLink from "../arrowLink/ArrowLink"
 
 const Halfs = ({ data, type, video, title, description }) => {
-  console.log(data.nodes[0])
-  const image = getImage(data.nodes[0])
+
+  const ref = useRef();
+  const { ref: inViewRef, inView } = useInView({
+    /* Optional options */
+    threshold: 0.05,
+  });
+
+
+// In order to assign multiple refs to a component, use `useCallback` so you don't recreate the function on each render
+const setRefs = useCallback(
+  (node) => {
+    // Ref's from useRef needs to have the node assigned to `current`
+    ref.current = node;
+    // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
+    inViewRef(node);
+  },
+  [inViewRef],
+);
+
+console.log(inView)
+
+  // console.log(data.nodes[0])
+  // console.log(...data.nodes)
+  const image = getImage(...data.nodes)
   return (
-    <section
+    <section ref={setRefs}
       className={`${halfsContainer} ${
         type.includes("standard") ? "" : reverse
       }  ${type.includes("color") && color}`}
     >
-      {/* <StaticImage
-      src="../../assets/narkoza.jpg"
-      loading="eager"
-      width={700}
-      quality={95}
-      layout="constrained"
-      formats={["auto", "webp", "avif"]}
-      alt="image"
-      style={{width: '50vw', height: '100%' }}
-       /> */}
       <GatsbyImage
-        className={halfsImg}
+        className={`${halfsImg} ${inView ? imageAnimation : ''}`}
         image={image}
         alt={title}
         style={{ height: "100%" }}
       />
-      <div className={`${halfsContent} ${type.includes("color") && color}`}>
+      <div className={`${halfsContent} ${type.includes("color") && color} `}>
+        <div className={`${inView ? textAnimation : ''}`}>
         <h4>{title}</h4>
         <p>{description}</p>
         <ArrowLink link={data.nodes[0].name} type={type} />
+        </div>
       </div>
     </section>
   )
@@ -53,9 +66,5 @@ const Halfs = ({ data, type, video, title, description }) => {
 Halfs.propTypes = {
   halfs: PropTypes.string,
 }
-
-// Hero.defaultProps = {
-//   heroType: {type: "home", title: "Dentysta dla Twojego Dziecka", description: ""},
-// }
 
 export default Halfs

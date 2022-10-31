@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import IconMailColor from "../../svg/icon-mail-color.svg"
 import IconPhoneColor from "../../svg/icon-phone-color.svg"

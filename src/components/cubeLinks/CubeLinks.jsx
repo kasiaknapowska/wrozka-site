@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import {cubeLinksContainer, cubeIcon} from "./cubeLinks.module.css"
 import ArrowLink from "../arrowLink/ArrowLink"
@@ -10,7 +9,7 @@ import OzonowanieIcon from "../../svg/ozonowanie-icon.svg"
 import LakowanieIcon from "../../svg/lakowanie-icon.svg"
 
 const CubeLinks = ({cubeElements}) => {
-console.log(cubeElements)
+// console.log(cubeElements)
   return (
  <section className={cubeLinksContainer}>
 

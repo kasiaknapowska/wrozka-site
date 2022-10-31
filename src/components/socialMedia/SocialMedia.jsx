@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import IconFB from "../../svg/icon-fb.svg"
 import IconInsta from "../../svg/icon-insta.svg"
@@ -11,8 +10,6 @@ import {
   smIcons,
   smIconsFooter
 } from "./socialMedia.module.css"
-
-import "./socialMedia.module.css"
 
 const SocialMedia = ({ type }) => {
 
@@ -36,7 +33,7 @@ SocialMedia.propTypes = {
 }
 
 SocialMedia.defaultProps = {
-  type: ``,
+  type: `footer`,
 }
 
 export default SocialMedia
