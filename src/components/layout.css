@@ -398,6 +398,14 @@ footer {
   font-size: var(--font-sx);
 }
 
+.scroll-to-top {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: var(--border-radius-s) 0 0 var(--border-radius-s) !important;
+  right: 0 !important;
+  z-index: 50 !important;
+  /* box-shadow: none !important; */
+}
 /* FORM STYLES START */
 form {
   display: flex;

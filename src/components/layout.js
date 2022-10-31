@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header/Header"
 import "./layout.css"
 import Footer from "./footer/Footer"
+import ScrollToTop from "react-scroll-to-top";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer/>
+      <ScrollToTop smooth color="#55aba7"/>
     </>
   )
 }
