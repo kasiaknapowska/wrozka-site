@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import { contactData as data } from "../../data/contactData"
 import { footerLinks } from "../../data/links"
 import SocialMedia from "../socialMedia/SocialMedia"
 
@@ -19,6 +20,7 @@ import {
 } from "./footer.module.css"
 
 const Footer = () => {
+  const { address, email, phone } = data
   return (
     <footer>
       <div className="container">
@@ -30,7 +32,7 @@ const Footer = () => {
                 <h4>{element.title}</h4>
                 <React.Fragment>
                   {element.links.map(link => (
-                    <Link className={links} key={link.url} to={link.url}>
+                    <Link className={links} key={link.url} to={`/${link.url}`}>
                       {link.text}
                     </Link>
                   ))}
@@ -46,11 +48,11 @@ const Footer = () => {
             <p>Klinika Stomatologii Dziecięcej</p>
             <div className={contact}>
               <IconMail />
-              <p>recepcja@wrozkazebuszka.pl</p>
+              <p><a href={`mailto:${email}`}>{email}</a></p>
             </div>
             <div className={contact}>
               <IconPhone />
-              <p>606&nbsp;04&nbsp;06</p>
+              <p><a href={`tel:${phone}`}>{phone}</a></p>
             </div>
           </div>
         </div>

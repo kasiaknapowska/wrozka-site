@@ -26,14 +26,15 @@
     margin-top: var(--size-gap);
   }
 .cubeIcon {
-    width: 5rem;
-    padding-left: .75rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    overflow: visible;
+    /* padding-left: .75rem; */
 }
 
 .cubeLinksContainer h3 {
     margin: 0;
     margin-top: 1rem;
-    text-transform: capitalize;
 }
 
   .cubeLinksContainer > div {

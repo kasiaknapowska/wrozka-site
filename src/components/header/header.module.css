@@ -1,8 +1,10 @@
 .headerInfo {
   display: flex;
   gap: var(--space-5);
-  color: var(--color-primary);
+  
 }
-.headerInfo span {
+.headerInfo span, .headerInfo span > a {
   font-size: var(--font-sx);
+  color: var(--color-primary);
+  text-decoration: none;
 }

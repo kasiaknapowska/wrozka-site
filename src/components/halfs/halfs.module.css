@@ -45,10 +45,3 @@
   color: white;
   background-color: var(--color-secondary);
 }
-.textAnimation {
-animation: text 1s ease-out;
-position: relative;
-}
-.imageAnimation {
-  animation: image 2s;
-}

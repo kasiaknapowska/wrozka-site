@@ -1,6 +1,9 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import { useRef, useCallback } from "react"
+import { useInView } from "react-intersection-observer"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
@@ -75,103 +78,114 @@ import Form from "../components/form/Form"
 // ]
 
 const cubeElements = [
-  { name: "higiena", link: "profilaktyka/higiena" },
-  { name: "fluoryzacja", link: "profilaktyka/fluoryzacja" },
-  { name: "ozonowanie", link: "profilaktyka/ozonowanie" },
-  { name: "lakowanie", link: "profilaktyka/lakowanie" },
+  { name: "Pierwsza wizyta", link: "pierwsza-wizyta" },
+  { name: "Leczenie w narkozie", link: "narkoza" },
+  { name: "Ortodoncja", link: "ortodoncja" },
+  { name: "Profilaktyka", link: "profilaktyka" },
 ]
 
 // const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = ({ data, location }) => (
-  <Layout>
-    <Seo title="Home" />
-    <Hero
-      hero={{
-        type: "main",
-        title: "Dentysta dla Twojego dziecka",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-      }}
-    />
-    <Halfs
-      title="Leczenie w narkozie"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
-      type="reverse"
-      data={data.image1}
-    />
-    <Halfs
-      title="Profilaktyka"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
-      type="standard"
-      data={data.image2}
-    />
-    <Halfs
-      title="Ortodoncja"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
-      type="reverse color"
-      data={data.image3}
-    />
-    <div className="containerS">
-      <h2>Jak leczymy</h2>
-      <h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut consectetur
-      </h3>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem.
-      </p>
-      <ul>
-        <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-        <li>
+const IndexPage = ({ data, location }) => {
+ 
+  const { ref: ref1, inView: inView1 } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
+  const { ref: ref2, inView: inView2 } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
+ 
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <Hero
+        hero={{
+          type: "main",
+          title: "Dentysta dla Twojego dziecka",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        }}
+      />
+      <Halfs
+        title="Leczenie w narkozie"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        type="reverse"
+        data={data.image1}
+      />
+      <Halfs
+        title="Profilaktyka"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        type="standard"
+        data={data.image2}
+      />
+      <Halfs
+        title="Ortodoncja"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        type="reverse color"
+        data={data.image3}
+      />
+      <div ref={ref1} className={`containerS ${inView1 ? "fadeIn" : ""}`} >
+        <h2 >Jak leczymy</h2>
+        <h3 >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut consectetur
+        </h3>
+        <p >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium
-        </li>
-      </ul>
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem.
+        </p>
+        <ul>
+          <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+          <li>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium
+          </li>
+        </ul>
 
-      <button className="btn btnPrimary">Umów wizytę</button>
-    </div>
-    <CubeLinks cubeElements={cubeElements} />
-    <div className="containerS">
-      <h2>Zęby bez próchnicy</h2>
-      <h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut consectetur
-      </h3>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem.
-      </p>
-      <ol>
-        <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-        <li>
+        <button className="btn btnPrimary">Umów wizytę</button>
+      </div>
+      <CubeLinks cubeElements={cubeElements} />
+      <div ref={ref2} className={`containerS ${inView2 ? "fadeIn" : ""}`}>
+        <h2>Zęby bez próchnicy</h2>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut consectetur
+        </h3>
+        <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium
-        </li>
-      </ol>
-    </div>
-    <GallerySlider gallery={data.gallery} />
-    <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" />
-    <section className={`container contactFlex`}>
-      <Contact/>
-      <Form/>
-    </section>
-    {/* <div className="container">
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem.
+        </p>
+        <ol>
+          <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+          <li>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium
+          </li>
+        </ol>
+      </div>
+      <GallerySlider gallery={data.gallery} />
+      <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" />
+      <section className={`container contactFlex`}>
+        <Contact />
+        <Form />
+      </section>
+      {/* <div className="container">
       <ul className={styles.list}>
         {links.map(link => (
           <li key={link.url}>
@@ -191,8 +205,9 @@ const IndexPage = ({ data, location }) => (
         </React.Fragment>
       ))}
     </div> */}
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 /**
  * Head export to define metadata for the page
@@ -200,7 +215,6 @@ const IndexPage = ({ data, location }) => (
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
 export const Head = () => <Seo title="Home" />
-
 
 export const pageQuery = graphql`
   query {

@@ -10,8 +10,8 @@ const Header = () => {
     <header>
       <div className={headerInfo}>
         <span>{address}</span>
-        <span>{email}</span>
-        <span>{phone}</span>
+        <span><a href={`mailto:${email}`}>{email}</a></span>
+        <span><a href={`tel:${phone}`}>{phone}</a></span>
       </div>
     </header>
   )

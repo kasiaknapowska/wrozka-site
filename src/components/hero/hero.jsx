@@ -18,7 +18,7 @@ import {
 } from "./hero.module.css"
 
 const Hero = ({ hero, location }) => {
-  const { type, title, description } = hero
+  const { type, title, description, text } = hero
 
   return (
     <div className={type === "main" ? heroBg : undefined}>
@@ -52,7 +52,7 @@ const Hero = ({ hero, location }) => {
               </>
             )}
             {type === "page" && (
-              <ArrowLink link="kontakt" text="Zapytaj o szczegóły" />
+              <ArrowLink link="kontakt" text={text ? text : "Zapytaj o szczegóły"} />
             )}
           </div>
         )}

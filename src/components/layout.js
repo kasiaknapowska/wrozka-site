@@ -13,6 +13,7 @@ import Header from "./header/Header"
 import "./layout.css"
 import Footer from "./footer/Footer"
 import ScrollToTop from "react-scroll-to-top";
+import CookiesModal from "./cookiesModal/CookiesModal"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer/>
       <ScrollToTop smooth color="#55aba7"/>
+      <CookiesModal/>
     </>
   )
 }

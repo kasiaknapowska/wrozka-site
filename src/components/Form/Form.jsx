@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useForm } from "react-hook-form"
+import { useInView } from "react-intersection-observer"
 import { Link } from "gatsby"
 
 import CalendarIcon from "../../svg/icon-calendar.svg"
@@ -15,14 +16,20 @@ const Form = ({ type }) => {
 
   const onSubmit = data => console.log(data)
 
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  })
+
   return (
     <>
       {type === "contact" ? (
         <h2 style={{ marginBottom: "var(--size-gap)" }}>Wypełnij formularz</h2>
       ) : undefined}
       <form
+      ref={ref}
         onSubmit={handleSubmit(onSubmit)}
-        className={type === "contact" ? "contactPageForm" : ""}
+        className={`${type === "contact" ? "contactPageForm" : ""} ${inView ? "fadeIn" : ''}`}
       >
         <label>
           Imię i nazwisko dziecka * &nbsp;&nbsp;
@@ -165,7 +172,7 @@ const Form = ({ type }) => {
           <span></span>
           <div>
             Zapoznałem (-am) się z Polityką prywatności.{" "}
-            <Link to="/">Treść polityki prywatności.</Link> * &nbsp;&nbsp;{" "}
+            <Link to="/polityka-prywatnosci">Treść polityki prywatności.</Link> * &nbsp;&nbsp;{" "}
             {errors.privacy && (
               <span className="errorMessage">{errors.privacy?.message}</span>
             )}

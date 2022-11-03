@@ -25,7 +25,7 @@ export const footerLinks = [
     title: "Leczenie",
     links: [
       { text: "Narkoza", url: "narkoza" },
-      { text: "Leczenie próchnicy", url: "leczenie-próchnicy" },
+      { text: "Leczenie próchnicy", url: "leczenie-prochnicy" },
       { text: "Ortodoncja", url: "ortodoncja" },
       { text: "Chirurgia", url: "chirurgia" },
       { text: "Znieczulenia", url: "znieczulenia" },

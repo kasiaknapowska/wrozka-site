@@ -1,3 +1,20 @@
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes textMove {
+  from {bottom: -3rem;}
+  to {bottom: 0;}
+}
+@keyframes textMove {
+  from {bottom: -3rem;}
+  to {bottom: 0;}
+}
+
 :root {
   --border-radius: 2rem;
   --border-radius-s: 0.5rem;
@@ -324,10 +341,11 @@ ol li::before {
   margin: 0 auto;
   max-width: 90%;
   padding: var(--size-gap) 0;
+  position: relative;
 }
 @media screen and (min-width: 900px) {
   .containerS {
-    max-width: 700px;
+    max-width: 800px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -537,3 +555,12 @@ legend {
   margin-bottom: var(--space-2);
 }
 /* FORM STYLES END */
+
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+.textMove {
+  position: relative;
+  animation: textMove 1s ease-out;
+}
