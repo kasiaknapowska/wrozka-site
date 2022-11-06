@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
+import GallerySlider from "../components/gallerySlider/GallerySlider"
 
 const cubeElements = [
   { name: "Pierwsza wizyta", link: "pierwsza-wizyta" },
@@ -13,7 +15,11 @@ const cubeElements = [
   { name: "Profilaktyka", link: "profilaktyka" },
 ]
 
-const ZebyBezProchnicy = ({ location }) => (
+const ZebyBezProchnicy = ({data, location }) => {
+  // console.log(data)
+  return (
+
+  
   <Layout>
     <Hero
       hero={{
@@ -47,9 +53,30 @@ const ZebyBezProchnicy = ({ location }) => (
       </ul>
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
     </div>
+    <GallerySlider gallery={data.gallery} />
   </Layout>
-)
+  )
+}
 
 export const Head = () => <Seo title="Zęby bez próchnicy" />
 
+
+
+export const pageQuery = graphql`
+  query {
+    gallery: allFile(filter: { name: { eq: "ortodoncja" } }) {
+      nodes {
+        relativePath
+        id
+        name
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`
+
 export default ZebyBezProchnicy
+
+

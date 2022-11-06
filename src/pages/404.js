@@ -9,11 +9,11 @@ import * as styles from "../components/index.module.css"
 
 const NotFoundPage = () => (
  
-    <section className={styles.notFoundContainer}>
+    <main className={styles.notFoundContainer}>
     <div className={styles.notFound}><h1>404</h1><Icon404/></div>
     <p>Ups... Strona, której szukasz, nie istnieje...</p>
     <ArrowLink text="Przejdź do strony głównej" to="/">WRÓĆ DO STRONY GŁÓWNEJ</ArrowLink>
-    </section>
+    </main>
   
 )
 

@@ -62,7 +62,7 @@
 @media screen and (min-width: 800px) {
   .galleryImg {
     display: block;
-    opacity: 30%;
+    opacity: 25%;
     margin-top: 5vw;
     width: 25vw;
     height: 30vw;
