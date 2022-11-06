@@ -1,11 +1,14 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
-import Form from "../components/form/Form"
 import Contact from "../components/contact/Contact"
+import Form from "../components/form/Form"
+
+
 
 import * as styles from "../components/index.module.css"
 
@@ -18,7 +21,7 @@ const Kontakt = ({ location }) => {
         }}
         location={location.pathname}
       />
-      <section className={` ${styles.contactPageSectionContainer}`}>
+      <section className={styles.contactPageSectionContainer}>
         <div className={styles.contactDataContainer}>
           <Contact type="contactPage" />
         </div>

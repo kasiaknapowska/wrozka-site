@@ -1,18 +1,19 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import { useRef, useCallback } from "react"
 import { useInView } from "react-intersection-observer"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
-import Halfs from "../components/halfs/Halfs"
-import GallerySlider from "../components/gallerySlider/GallerySlider"
-import CubeLinks from "../components/cubeLinks/CubeLinks"
-import Movie from "../components/movie/Movie"
 import Contact from "../components/contact/Contact"
+import CubeLinks from "../components/cubeLinks/CubeLinks"
 import Form from "../components/form/Form"
+import GallerySlider from "../components/gallerySlider/GallerySlider"
+import Halfs from "../components/halfs/Halfs"
+import Movie from "../components/movie/Movie"
+
+
 
 // import * as styles from "../components/index.module.css"
 

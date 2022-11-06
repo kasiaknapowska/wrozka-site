@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import Movie from "../components/movie/Movie"
+
 
 const TwojeKorzysci = ({ location }) => (
   <Layout>

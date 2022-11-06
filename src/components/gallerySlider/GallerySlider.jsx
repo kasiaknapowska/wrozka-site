@@ -29,7 +29,7 @@ const GallerySlider = ({ gallery }) => {
       }, 1000)
       return () => clearInterval(interval)
     }
-  }, [fade])
+  }, [fade, images])
 
   const goToPrevious = () => {
     setFade(true)

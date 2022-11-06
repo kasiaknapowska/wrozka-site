@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
+
 import Seo from "../components/seo"
 import ArrowLink from "../components/arrowLink/ArrowLink"
 import Icon404 from "../svg/icon-404.svg"
