@@ -1,0 +1,32 @@
+.imgSection {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.imgWrap {
+    position: relative;
+    top: 10%;
+    height: 40%;
+    width: 1000px;
+    overflow: hidden;
+    /* opacity: 0; */
+}
+.imgWrapActive {
+    width: 60vw;
+    opacity: 1;
+    transition: opacity 0s, width 2s;
+}
+.imgWrapActive > .galleryMainImg {
+    transform: scale(1);
+    transition: 1s ease-out;
+}
+.galleryMainImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.6);
+}

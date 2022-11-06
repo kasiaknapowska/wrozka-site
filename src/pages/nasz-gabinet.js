@@ -1,13 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import GalleryMain from "../components/galleryMain/GalleryMain"
 
 
-const NaszGabinet = ({ location }) => (
+const NaszGabinet = ({ data, location }) => (
   <Layout>
     <Hero
       hero={{
@@ -16,7 +16,7 @@ const NaszGabinet = ({ location }) => (
       location={location.pathname}
     />
 
-<GalleryMain gallery={gallery}/>
+<GalleryMain gallery={data.gallery}/>
 
     <div className="containerS">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
