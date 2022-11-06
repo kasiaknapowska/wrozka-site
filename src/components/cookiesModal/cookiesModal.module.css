@@ -1,34 +1,37 @@
 .cookiesContainer {
-    position: fixed;
-    bottom: 0;
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    background-color: var(--color-primary);
-    padding: var(--space-3) var(--space-6);
-    width: 100%;
-    z-index: 30;
-    display: flex;
-    /* align-items: center; */
-    flex-wrap: wrap;
-    gap: 0 var(--space-2);
+  position: fixed;
+  bottom: 0;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: var(--color-primary);
+  padding: var(--space-3) var(--space-6);
+  width: 100%;
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-2);
+  align-items: center;
 }
 .cookiesContainer > p {
-    font-size: var(--font-sx);
-    color: white;
-    margin: 0;
-    margin-bottom: var(--space-2);
+  font-size: var(--font-sx);
+  color: white;
+  margin: 0;
+  /* margin-bottom: var(--space-2); */
 }
 .modalBtn {
-    border: 1px solid white;
-    border-radius: var(--border-radius-s);
-    background-color: transparent;
-    font-size: var(--font-sx);
-    color: white;
-    padding: var(--space-1) var(--space-2);
-   cursor: pointer;
-   text-decoration: none;
+  border: 1px solid white;
+  border-radius: var(--border-radius-s);
+  background-color: transparent;
+  font-size: var(--font-sx);
+  color: white;
+  padding: var(--space-1) var(--space-2);
+  cursor: pointer;
+  text-decoration: none;
+  margin: var(--space-2) 0;
+  font-family: var(--font-web);
+  min-height: 35px;
 }
 .modalBtn:hover {
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, .1);
-    transition: .5s;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
 }
