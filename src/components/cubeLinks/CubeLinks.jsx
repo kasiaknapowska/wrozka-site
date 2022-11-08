@@ -12,7 +12,7 @@ import OzonowanieIcon from "../../svg/ozonowanie-icon.svg"
 import LakowanieIcon from "../../svg/lakowanie-icon.svg"
 import DzieciIcon from "../../svg/dzieci-icon.svg"
 import MlodziezIcon from "../../svg/mlodziez-icon.svg"
-import PrzezroczysteNakladkiIcon from "../../svg/przezroczyste-nakladki-icon-1.svg"
+import PrzezroczysteNakladkiIcon from "../../svg/przezroczyste-nakladki-icon.svg"
 import InformacjeDlaPacjentaIcon from "../../svg/informacje-dla-pacjenta-icon.svg"
 
 const CubeLinks = ({cubeElements}) => {

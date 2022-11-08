@@ -5,40 +5,38 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
 
-
 const NakladkiOrtodontyczne = ({ location }) => (
   <Layout>
     <Hero
       hero={{
         type: "page",
-        title: "Przezroczyste nakladki ortodontyczne",
+        title: "Przezroczyste nakładki ortodontyczne",
         description:
-          "At vero eos et accusamus et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "Dużą popularnością wśród młodzieży cieszą się aparaty ortodontyczne w postaci indywidualnie zaprojektowanych przezroczystych nakładek na zęby. Są one niewidoczne, komfortowe i można je bez problemu zdejmować. ",
       }}
       location={location.pathname}
     />
-    <div className="containerS">
-      <h2>Dlaczego warto leczyć zęby mleczne? </h2>
+    <section className="container">
       <h3>
-        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-        voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
+        Styl życia młodych ludzi i ich dbałość o wygląd sprawia, że metalowe
+        zamki i druty na zębach są nie do zaakceptowania. Leczenie
+        przezroczystymi nakładkami doskonale odpowiada potrzebom młodych,
+        aktywnych ludzi.
       </h3>
       <p>
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-        minus id quod maxime placeat facere possimus, omnis voluptas assumenda
-        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
-        debitis aut rerum necessitatibus saepe eveniet ut et voluptates
-        repudiandae sint et molestiae non recusandae.
+        Leczenie przezroczystymi nakładkami jest skuteczne zarówno w delikatnych
+        wadach zgryzu jak i w bardziej skomplikowanych przypadkach. Każdorazowo
+        decyzję o doborze najlepszego rozwiązania podejmuje rodzic lub opiekun
+        Pacjenta wraz z lekarzem ortodontą.
       </p>
-      <ul>
-        <li>facilis est et expedita distinctio</li>
-        <li>aut reiciendis voluptatibus maiores</li>
-        <li>earum rerum hic tenetur a sapiente</li>
-      </ul>
-      <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
-    </div>
+      <p>
+        W naszym gabinecie istnieje możliwość wyboru systemu przezroczystych
+        nakładek – dostępny jest popularny system Invisalign oraz nakładki Clear
+        Correct.
+      </p>
+      
+    </section>
+    <div className="container"><Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link></div>
   </Layout>
 )
 

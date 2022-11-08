@@ -331,6 +331,16 @@ ol li::before {
   position: relative;
   top: 0.75rem;
 }
+.twoColumns {
+  display: grid;
+  --w: 350px;
+  --n: 2;
+  column-gap: var(--size-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr)
+  );
+}
 
 .container {
   margin: 0 auto;

@@ -20,7 +20,7 @@ import {
 } from "./footer.module.css"
 
 const Footer = () => {
-  const { address, email, phone } = data
+  const { email, phone } = data
   return (
     <footer>
       <div className="container">

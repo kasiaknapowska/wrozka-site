@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
-import { useEffect } from "react"
 import { useState } from "react"
 
-import {cookiesContainer, modalBtn, closeModal, showModal} from "./cookiesModal.module.css"
+import {cookiesContainer, modalBtn} from "./cookiesModal.module.css"
 
 const CookiesModal = () => {
 const [showModal, setShowModal] = useState(true);
