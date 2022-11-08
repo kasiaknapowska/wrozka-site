@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
-
+import Movie from "../../components/movie/Movie"
 
 const Higiena = ({ location }) => (
   <Layout>
@@ -13,12 +13,66 @@ const Higiena = ({ location }) => (
         type: "page",
         title: "Jak dbać o zęby dziecka?",
         description:
-          "At vero eos et accusamus et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "Jak dbać o prawidłową higienę jamy ustnej u dziecka? Zdajemy sobie sprawę, że jest to nie lada wyzwanie. Małe dzieci często nie chcą myć zębów, te starsze szczotkują zęby pobieżnie i nieefektywnie. Poniżej przedstawiamy kilka prostych porad dla Rodziców, jak prawidłowo dbać o higienę zębów u dzieci. Jeśli chcesz otrzymać indywidualne wskazówki, by prawidłowo zadbać o zęby swojego dziecka, skontaktuj się z nami!",
+        text: "Przejdź do kontaktu",
       }}
       location={location.pathname}
     />
-    <div className="containerS">
-      
+    <section className="container">
+      <h2>Porady dla Rodziców</h2>
+      <ul>
+        <li>
+          Regularne szczotkowanie zębów odpowiednią techniką i dobrze dobraną
+          szczoteczką i pastą do zębów. Szczotkowanie powinno trwać około 2
+          minuty, a dziecko musi dotrzeć szczoteczką do wszystkich powierzchni
+          zębów, również tych z tyłu. W młodszych dzieci konieczna jest pomoc
+          Rodziców, u starszych – warto kontrolować czy zęby są odpowiednio
+          oczyszczone!
+        </li>
+        <li>
+          Stosowanie szczoteczki elektrycznej już od najmłodszych lat – taka
+          szczoteczka dużo efektywniej oczyszcza zęby.
+        </li>
+        <li>
+          Stosowanie nici dentystycznych oraz irygatora - nawet u dzieci daje to
+          doskonałe efekty!
+        </li>
+        <li>
+          Pilnowanie niepodjadania przed snem. Ostatni posiłek w ciągu dnia,
+          należy zjeść przed wieczornym szczotkowaniem – potem można już tylko
+          pić czystą wodę. Nie należy podawać dzieciom mleka i słodkich napojów
+          bezpośrednio przed zaśnięciem.
+        </li>
+        <li>
+          Niewkładanie palców i przedmiotów do buzi. Otwieranie opakowań i
+          butelek rękami, a nie zębami
+        </li>
+        <li>
+          Ograniczenie ilości spożywanych słodyczy. Jeśli już dajemy dziecku
+          słodką przekąskę, to niech dziecko zje ją na raz a potem umyje zęby, a
+          nie co chwilę podjada. Przy podjadaniu cukier ma długi kontakt z
+          powierzchnią zębów co sprzyja rozwojowi próchnicy.
+        </li>
+        <li>
+          Dbanie o wprowadzenie do diety dziecka produktów wpływających na
+          wzmocnienie kości i zębów. Ważne jest dawanie dzieciom do chrupania
+          także twardych pokarmów (sucharki, surowe warzywa), które stymulują
+          prawidłowy rozwój kości.
+        </li>
+        <li>
+          Suplementacja witaminy D, która hamuje rozwój próchnicy w zębach
+          mlecznych. Jak dobrać prawidłową dawkę witaminy D dla dziecka? W tym
+          celu warto wykonać badanie - dostępne jest na miejscu w naszym
+          gabinecie!
+        </li>
+        <li>
+          Regularne wizyty u stomatologa, diagnostyka i zabiegi profilaktyczne
+          to klucz do zachowania zdrowych zębów.
+        </li>
+      </ul>
+    </section>
+    <Movie src="https://www.youtube.com/embed/Cjk1FhDuBp8" />
+    <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
     </div>
   </Layout>
