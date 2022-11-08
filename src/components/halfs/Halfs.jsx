@@ -13,7 +13,7 @@ import {
 } from "./halfs.module.css"
 import ArrowLink from "../arrowLink/ArrowLink"
 
-const Halfs = ({ data, type, video, title, description }) => {
+const Halfs = ({ data, type, video, title, description, text }) => {
   const ref = useRef()
   const { ref: inViewRef, inView } = useInView({
     /* Optional options */
@@ -53,7 +53,7 @@ const Halfs = ({ data, type, video, title, description }) => {
         <div className={`${inView ? "fadeIn" : ""}`}>
           <h4>{title}</h4>
           <p>{description}</p>
-          <ArrowLink link={data.nodes[0].name} type={type} />
+          <ArrowLink link={data.nodes[0].name} type={type} text={text}/>
         </div>
       </div>
     </section>

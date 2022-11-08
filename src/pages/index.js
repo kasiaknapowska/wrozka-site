@@ -106,26 +106,29 @@ const IndexPage = ({ data, location }) => {
           type: "main",
           title: "Dentysta dla Twojego dziecka",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "Wróżka Zębuszka to miejsce stworzone z myślą o najmłodszych Pacjentach. Tutaj w kompleksowy sposób dbamy o ich uśmiech, zdrowie i dobre samopoczucie",
         }}
       />
       <Halfs
         title="Leczenie w narkozie"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        description="U szczególnie wrażliwych Pacjentów, którzy nie współpracują z lekarzem, leczenie zębów przeprowadzamy pod narkozą. Dzięki temu nie narażamy dzieci na niepotrzebny stres."
         type="reverse"
         data={data.image1}
+        
       />
       <Halfs
         title="Profilaktyka"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        description="Codzienna higiena, wizyty kontrolne u dentysty, zabiegi profilaktyczne, zdrowe nawyki, odpowiednia dieta i prawidłowy poziom witaminy D - to wszystko pomaga zadbać o zdrowy uśmiech dziecka."
         type="standard"
         data={data.image2}
+        
       />
       <Halfs
         title="Ortodoncja"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut consectetur adipiscing elit, sed do eiusmod tempor incidi"
+        description="Wiek dziecięcy to jedyny moment, kiedy można wpłynąć na kształt rozwijającej się kości, by zapewnić w przyszłości prawidłowe ustawienie zębów. Dlatego nie zwlekaj z wizytą u ortodonty!"
         type="reverse color"
         data={data.image3}
+        
       />
       <div ref={ref1} className={`containerS ${inView1 ? "fadeIn" : ""}`} >
         <h2 >Jak leczymy</h2>

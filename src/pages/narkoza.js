@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
+import GallerySlider from "../components/gallerySlider/GallerySlider"
 
 const cubeElements = [
   { name: "Leczenie próchnicy", link: "leczenie-prochnicy" },
@@ -13,7 +15,7 @@ const cubeElements = [
   { name: "Leczenie kanałowe", link: "leczenie-kanalowe" },
 ]
 
-const Narkoza = ({ location }) => (
+const Narkoza = ({ data, location }) => (
   <Layout>
     <Hero
       hero={{
@@ -43,6 +45,7 @@ const Narkoza = ({ location }) => (
       </p>
       
     </section>
+    <CubeLinks cubeElements={cubeElements} />
     <section className="container">
     <h2>Korzyści dla dziecka i Rodzica</h2>
       <ul>
@@ -81,7 +84,7 @@ const Narkoza = ({ location }) => (
         <li>po leczeniu w narkozie dzielni mali Pacjenci otrzymują nagrody</li>
       </ul>
     </section>
-    <CubeLinks cubeElements={cubeElements} />
+    <GallerySlider gallery={data.gallery}/>
     <section className="container">
       <h2>Zalecenia dla Rodziców </h2>
       <h3>Przed zabiegiem w narkozie</h3>
@@ -127,5 +130,21 @@ const Narkoza = ({ location }) => (
 )
 
 export const Head = () => <Seo title="Leczenie zębów w narkozie" />
+
+export const pageQuery = graphql`
+query {
+  gallery: allFile(filter: { name: { eq: "narkoza" } }) {
+    nodes {
+      relativePath
+      id
+      name
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+}
+`
+
 
 export default Narkoza
