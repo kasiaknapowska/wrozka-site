@@ -19,6 +19,7 @@ export const footerLinks = [
       { text: "Jak leczymy", url: "zeby-bez-prochnicy" },
       { text: "Badania", url: "badania" },
       { text: "Nasz gabinet", url: "nasz-gabinet" },
+      { text: "Znieczulenia", url: "znieczulenia" },
     ],
   },
   {
@@ -28,7 +29,7 @@ export const footerLinks = [
       { text: "Leczenie próchnicy", url: "leczenie-prochnicy" },
       { text: "Ortodoncja", url: "ortodoncja" },
       { text: "Usuwanie zębów", url: "ekstrakcje-zebow" },
-      { text: "Znieczulenia", url: "znieczulenia" },
+      { text: "Profilaktyka", url: "profilaktyka" },
     ],
   },
 ]
