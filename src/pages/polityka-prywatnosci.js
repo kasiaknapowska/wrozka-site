@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
@@ -18,7 +17,7 @@ const PolitykaPrywatnosci = ({ location }) => (
       }}
       location={location.pathname}
     />
-    <div className="container">
+    <section className="container">
       <p>
         Administratorem danych osobowych jest firma Roman Borczyk Klinika
         Implantologii i Stomatologii Estetycznej sp.j. w Katowicach, ul. Czajek
@@ -44,6 +43,9 @@ const PolitykaPrywatnosci = ({ location }) => (
         naszego gabinetu przy ulicy Czajek 5a, telefonicznie pod nr telefonu +48
         32 203 74 25 lub mailowo pod adresem obsluga.pacjenta@borczyk.pl
       </p>
+     
+    </section>
+    <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
     </div>
   </Layout>

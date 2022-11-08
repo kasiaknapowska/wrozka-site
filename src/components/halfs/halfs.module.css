@@ -20,7 +20,10 @@
 .halfsImg {
   width: 100%;
 }
-
+.color {
+  color: white;
+  background-color: var(--color-secondary);
+}
 @media screen and (min-width: 800px) {
   .halfsContainer {
     display: flex;
@@ -33,7 +36,7 @@
     flex-direction: row-reverse;
   }
   .halfsContent {
-    padding: var(--space-6);
+    padding: 0 var(--space-6);
     width: 50vw;
   }
   .halfsImg {
@@ -41,7 +44,13 @@
     flex-shrink: 0;
   }
 }
-.color {
-  color: white;
-  background-color: var(--color-secondary);
+@media screen and (min-width: 1200px) {
+  .halfsContent {
+    padding: 0 6rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .halfsContent {
+    padding: 0 8rem;
+  }
 }

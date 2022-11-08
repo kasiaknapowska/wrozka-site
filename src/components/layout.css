@@ -369,6 +369,7 @@ ol li::before {
   align-items: center;
 }
 .btn {
+  display: inline-block;
   padding: var(--space-3) var(--space-4);
   text-transform: uppercase;
   font-size: var(--font-sx);
@@ -380,6 +381,9 @@ ol li::before {
   min-width: 230px;
   cursor: pointer;
   max-width: 230px;
+}
+.btn:hover {
+  text-decoration: none;
 }
 
 .btnPrimary {

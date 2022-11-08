@@ -130,7 +130,7 @@ const IndexPage = ({ data, location }) => {
         data={data.image3}
         
       />
-      <div ref={ref1} className={`containerS ${inView1 ? "fadeIn" : ""}`} >
+      <div ref={ref1} className={`container ${inView1 ? "fadeIn" : ""}`} >
         <h2 >Jak leczymy</h2>
         <h3 >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -158,7 +158,7 @@ const IndexPage = ({ data, location }) => {
         <button className="btn btnPrimary">Umów wizytę</button>
       </div>
       <CubeLinks cubeElements={cubeElements} />
-      <div ref={ref2} className={`containerS ${inView2 ? "fadeIn" : ""}`}>
+      <div ref={ref2} className={`container ${inView2 ? "fadeIn" : ""}`}>
         <h2>Zęby bez próchnicy</h2>
         <h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

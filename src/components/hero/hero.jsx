@@ -16,6 +16,7 @@ import {
   arrow,
   backgroundImage,
 } from "./hero.module.css"
+import { Link } from "gatsby"
 
 const Hero = ({ hero, location }) => {
   const { type, title, description, text } = hero
@@ -45,10 +46,10 @@ const Hero = ({ hero, location }) => {
             <p>{description}</p>
             {type === "main" && (
               <>
-                <button className="btn btnPrimary heroBtn">Umów wizytę</button>
-                <button className="btn btnSecondary heroBtn">
+                <Link to="kontakt" className="btn btnPrimary heroBtn">Umów wizytę</Link>
+                <Link to="twoje-korzysci" className="btn btnSecondary heroBtn">
                   Dowiedz się więcej
-                </button>
+                </Link>
               </>
             )}
             {type === "page" && (
