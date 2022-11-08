@@ -5,7 +5,6 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
 
-
 const Lakowanie = ({ location }) => (
   <Layout>
     <Hero
@@ -13,30 +12,44 @@ const Lakowanie = ({ location }) => (
         type: "page",
         title: "Lakowanie zębów",
         description:
-          "At vero eos et accusamus et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          "Zęby posiadają liczne bruzdy, szczeliny i zagłębienia, które trudno jest oczyścić. Szczególnie u dzieci zachowanie prawidłowej higieny często graniczy z cudem. Niedoczyszczone powierzchnie, do których nie dociera szczoteczka lub nić dentystyczna, są siedliskiem bakterii próchnicowych, które żywią się resztkami zalegającego pokarmu i powodują rozwój próchnicy. Jak temu zapobiec?",
+        text: "Umów dziecko na zabieg lakowania",
       }}
       location={location.pathname}
     />
-    <div className="containerS">
-      <h2>Dlaczego warto leczyć zęby mleczne? </h2>
-      <h3>
-        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-        voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
-      </h3>
+    <section className="container">
+      <h2>Lakowanie chroni bruzdy zębów przed próchnicą!</h2>
       <p>
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-        minus id quod maxime placeat facere possimus, omnis voluptas assumenda
-        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
-        debitis aut rerum necessitatibus saepe eveniet ut et voluptates
-        repudiandae sint et molestiae non recusandae.
+        Zabieg najlepiej wykonać tuż po wyrznięciu całej powierzchni żującej
+        zęba, szczególnie trzonowców i przedtrzonowców. Dlaczego warto wykonać
+        zabieg jak najszybciej? Dlatego, że powierzchnie zębów muszą być
+        całkowicie zdrowe, wolne od próchnicy! Lak pokrywa powierzchnię szczelin
+        i bruzd, zapobiegając zaleganiu pokarmów tych miejscach, chroniąc przed
+        czynnikami zewnętrzbnymi (np. cukrem) i zapobiegając rozwojowi bakterii.
       </p>
-      <ul>
-        <li>facilis est et expedita distinctio</li>
-        <li>aut reiciendis voluptatibus maiores</li>
-        <li>earum rerum hic tenetur a sapiente</li>
-      </ul>
+      <h3>Jak przebiega lakowanie zębów?</h3>
+      <ol>
+        <li>
+          Przed zabiegiem powierzchnie zębów dokładnie oczyszczamy szczoteczką
+          ze specjalną pastą lub piaskarką.
+        </li>
+        <li>
+          Wykonujemy badanie laserem diagnostycznym, który pozwala obiektywnie
+          ocenić, czy ząb jest całkowicie zdrowy i może być poddany lakowaniu.
+          Laser wykrywa próchnicę w początkowym stadium, gdy nie jest ona
+          jeszcze widoczna „gołym okiem”. W przypadku demineralizacji stosujemy
+          inne metody profilaktyczne
+        </li>
+        <li>
+          Przeprowadzamy lakowanie, które polega na nałożeniu specjalnego
+          preparatu, który po utwardzeniu za pomocą lampy stomatologicznej
+          chroni bruzdy zębów przed próchnicą.
+        </li>
+        <li>Co pół roku należy kontrolować stan laku z zębach.
+</li>
+      </ol>
+    </section>
+    <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
     </div>
   </Layout>
