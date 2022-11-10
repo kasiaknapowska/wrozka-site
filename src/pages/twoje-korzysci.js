@@ -23,9 +23,11 @@ const TwojeKorzysci = ({ location }) => (
     <div className="containerS">
       <h2>Dlaczego warto leczyć zęby mleczne? </h2>
       <h3>
-        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-        voluptatibus maiores alias consequatur aut perferendis doloribus
-        asperiores repellat.
+      W gabinecie Wróżka Zębuszka zadbamy kompleksowo o Twoje dziecko,
+          zapewniając profilaktykę, leczenie próchnicy oraz leczenie
+          ortodontyczne. Dodatkowo zbadamy poziom witaminy D i w razie potrzeby
+        wykonamy dodatkowe badania, dzięki którym ocenimy stan zdrowia
+          ogólnego Dziecka i uzupełnimy niedobory witamin, mikro i makroelementów.
       </h3>
       <p>
         Et harum quidem rerum facilis est et expedita distinctio. Nam libero

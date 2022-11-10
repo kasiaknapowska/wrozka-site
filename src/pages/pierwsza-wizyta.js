@@ -16,7 +16,7 @@ const PierwszaWizyta = ({ location }) => (
         type: "page",
         title: "Pierwsza wizyta",
         description:
-          "Pierwsza wizyta dziecka w gabinecie stomatologicznym to niezwykle ważne wydarzenie. Przebieg wizyty ma wpływ na późniejsze nastawienie dziecka do dentysty. Dlatego, by nie zrazić dziecka do stomatologa, na pierwszą wizytę warto wybrać się do gabinetu stworzonego z myślą o najmłodszych Pacjentach. Takim gabinetem jest Wróżka Zębuszka.",
+          "Pierwsza wizyta dziecka u dentysty powinna odbyć się w momencie, gdy pojawiają się pierwsze zęby, zwykle około 1 roku życia dziecka. Pierwsza wizyta w gabinecie stomatologicznym to niezwykle ważne wydarzenie. Przebieg wizyty ma wpływ na późniejsze nastawienie dziecka do dentysty. Dlatego, by nie zrazić dziecka do stomatologa, na pierwszą wizytę warto wybrać się do gabinetu stworzonego z myślą o najmłodszych Pacjentach. Takim gabinetem jest Wróżka Zębuszka.",
         text: "Umów wizytę adaptacyjną",
       }}
       location={location.pathname}
@@ -36,7 +36,10 @@ const PierwszaWizyta = ({ location }) => (
         lekarzem, asystentkami. Dziecko ma okazję pobawić się w naszej sali
         zabaw, obejrzeć bajkę, odbyć „przejażdżkę” na fotelu dentystycznym.
         Lekarz przeprowadza badanie zębów w sposób komfortowy i bezstresowy dla
-        dziecka.
+        dziecka. Oprócz oceny zębów doradzamy jak prawidłowo dbać o higienę u
+        malucha, jaką szczoteczkę i pastę wybrać, jak często należy zgłaszać się
+        na wizyty kontrolne i jakie zabiegi można wykonać, by zęby mleczne
+        dotrwały w zdrowiu do czasu ich fizjologicznej wymiany.
       </p>
       <ArrowLink
         type="standard"

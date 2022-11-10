@@ -30,6 +30,10 @@ const Higiena = ({ location }) => (
           oczyszczone!
         </li>
         <li>
+          Najlepiej stosować pastę z fluorem już od pierwszego zęba mlecznego.
+          Ilość pasty wielkości ziarnka grochu jest bezpieczna dla dziecka.
+        </li>
+        <li>
           Stosowanie szczoteczki elektrycznej już od najmłodszych lat – taka
           szczoteczka dużo efektywniej oczyszcza zęby.
         </li>
