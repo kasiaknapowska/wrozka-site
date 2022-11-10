@@ -126,7 +126,10 @@ const IndexPage = ({ data, location }) => {
         type="reverse color"
         data={data.image3}
       />
-      <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" title="Dentysta dla dzieci w Katowicach"/>
+      <Movie
+        src="https://youtube.com/embed/fR8TBCx66dA"
+        title="Dentysta dla dzieci w Katowicach"
+      />
       <div ref={ref1} className={`container ${inView1 ? "fadeIn" : ""}`}>
         <h2>Jak leczymy</h2>
         <h3>
@@ -187,30 +190,48 @@ const IndexPage = ({ data, location }) => {
           dla dziecka niesamowitą przygodą!
         </h3>
         <p>
-          Posiadamy poczekalnię połączoną z salą zabaw, gdzie dzieci mogą
-          wspaniale spędzić czas przed wizytą na fotelu dentystycznym. Nasze
-          gabinety są przystosowane do leczenia najmłodszych i panuje w nich
-          ciepła i przyjazna atmosfera. W czasie leczenia dzieci na ekranach
-          umieszczonych przy fotelach stomatologicznych wyświetlane są ulubione
-          dziecięce bajki. Za dzielną postawę i odwagę maluchy otrzymują
-          atrakcyjne upominki. To wszystko wzmacnia na przyszłość pozytywne
-          skojarzenia związane z wizytą u stomatologa.
+          Posiadamy komfortowy pokój konsultacyjny oraz poczekalnię połączoną z
+          salą zabaw, gdzie dzieci mogą wspaniale spędzić czas przed wizytą na
+          fotelu dentystycznym. Nasze gabinety są przystosowane do leczenia
+          najmłodszych i panuje w nich ciepła i przyjazna atmosfera. W czasie
+          leczenia dzieci na ekranach umieszczonych przy fotelach
+          stomatologicznych wyświetlane są ulubione dziecięce bajki. Za dzielną
+          postawę i odwagę maluchy otrzymują atrakcyjne upominki, które
+          wzmacniają na przyszłość pozytywne skojarzenia związane z wizytą u
+          stomatologa. Dla dzieci po narkozie udostępniamy przytulny pokój, w
+          którym budzą się w obecności Rodziców / Opiekunów.
         </p>
         <h3>Dlaczego warto wybrać Wróżkę zębuszkę? </h3>
         <p>Nasz gabinet posiada wszystko co potrzeba, by leczyć:</p>
         <ul>
-          <li><strong>BEZBOLEŚNIE</strong> - znieczulenie komputerowe, podtlenek azotu, leczenie w narkozie</li>
           <li>
-            <strong>KOMPLEKSOWO </strong> - diagnostyka, profilaktyka i leczenie - wszystko w jednym miejscu
+            <strong>BEZBOLEŚNIE</strong> - znieczulenie komputerowe, podtlenek
+            azotu, leczenie w narkozie
           </li>
-          <li><strong>BEZSTRESOWO</strong> - przyjazna atmosfera, prezenty dla dzieci</li>
-          <li><strong>KOMFORTOWO</strong> - bajkowe wnętrza, personel doświadczony w pracy z dziećmi</li>
-          <li><strong>BEZPIECZNIE</strong> - nowoczesna diagnostyka, specjalistyczny sprzęt</li>
-          <li><strong>Z GWARANCJĄ</strong> - zabiegi wykonywane u nas objęte są gwarancją</li>
+          <li>
+            <strong>KOMPLEKSOWO </strong> - diagnostyka, profilaktyka i leczenie
+            - wszystko w jednym miejscu
+          </li>
+          <li>
+            <strong>BEZSTRESOWO</strong> - przyjazna atmosfera, prezenty dla
+            dzieci
+          </li>
+          <li>
+            <strong>KOMFORTOWO</strong> - bajkowe wnętrza, personel doświadczony
+            w pracy z dziećmi
+          </li>
+          <li>
+            <strong>BEZPIECZNIE</strong> - nowoczesna diagnostyka,
+            specjalistyczny sprzęt
+          </li>
+          <li>
+            <strong>Z GWARANCJĄ</strong> - zabiegi wykonywane u nas objęte są
+            gwarancją
+          </li>
         </ul>
       </div>
       <GallerySlider gallery={data.gallery} />
-      
+
       <section className={`container contactFlex`}>
         <Contact />
         <Form />
