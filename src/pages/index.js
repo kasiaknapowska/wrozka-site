@@ -106,7 +106,7 @@ const IndexPage = ({ data, location }) => {
           type: "main",
           title: "Dentysta dla Twojego dziecka",
           description:
-            "Wróżka Zębuszka to miejsce stworzone z myślą o najmłodszych Pacjentach. Tutaj w kompleksowy sposób dbamy o ich uśmiech, zdrowie i dobre samopoczucie",
+            "Wróżka Zębuszka to miejsce stworzone z myślą o najmłodszych Pacjentach. Tutaj w kompleksowy sposób zadbamy o uśmiech, zdrowie i dobre samopoczucie Twojego dziecka.",
         }}
       />
       <Halfs

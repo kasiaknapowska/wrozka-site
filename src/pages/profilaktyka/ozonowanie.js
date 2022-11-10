@@ -10,16 +10,16 @@ const Ozonowanie = ({ location }) => (
     <Hero
       hero={{
         type: "page",
-        title: "Co daje ozonowanie?",
+        title: "Walka z próchnicą bez borowania",
         description:
-          "Ozonowanie hamuje rozwój próchnicy w zębach mlecznych, które są szczególnie podatne na działanie bakterii i kwasów obecnych w jamie ustnej.",
+          "Bakterie zasiedlające bruzdy zębowe przyczyniają się do rozwoju próchnicy. W przypadku zębów mlecznych proces ten jest bardzo dynamiczny. Wczesne wykrycie zmian w zębach, zanim pojawi się ubytek, umożliwia bezbolesne leczenie gazowym ozonem.",
         text: "Umów dziecko na zabieg ozonowania",
       }}
       location={location.pathname}
     />
     <section className="container">
       <h3>
-        Ozonowanie to zabieg profilaktyczny, który doskonale sprawdza się
+        Ozonowanie to skuteczny i bezbolesny zabieg profilaktyczny, który doskonale sprawdza się
         zarówno w przypadku zębów mlecznych jak i stałych u dzieci. Ozonowanie
         jest bezbolesne, trwa dosłownie chwilę i pozwala pozbyć się 99,9%
         bakterii próchnicowych.

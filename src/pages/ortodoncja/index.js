@@ -25,7 +25,7 @@ const Ortodoncja = ({ data, location }) => (
         type: "page",
         title: "Ortodoncja dla dzieci i młodzieży",
         description:
-          "Im szybciej zgłosimy się z dzieckiem do ortodonty, tym lepiej. Optymalny wiek na pierwszą wizytę to 3-5 lat! Jeśli Twoje dziecko ukończyło 7 lat – nie zwlekaj z wizytą! Zgłaszając się do ortodonty zadbasz o równe ustawienie zębów dziecka, dzięki czemu w przyszłości unikniesz poważnego leczenia ortodontycznego lub skomplikowanych operacji.",
+          "Bóle głowy, szumy w uszach, bezdechy nocne, chrapanie, zgrzytanie zębami, wady wymowy, problemy z pamięcią, koncentracją i nadpobudliwość - to wszystko może być efektem wad ortodontycznych u dziecka. Im szybciej zgłosimy się do ortodonty, tym lepiej. Optymalny wiek na pierwszą wizytę to 3-5 lat! Jeśli Twoje dziecko ukończyło 7 lat – nie zwlekaj z wizytą! Zgłaszając się do ortodonty wyeliminujesz wspomniane wcześniej zaburzenia oraz zadbasz o równe ustawienie zębów dziecka. Dzięki temu w przyszłości unikniesz konieczności poważnego leczenia ortodontycznego lub skomplikowanych operacji.",
         text: "Zapytaj o leczenie ortodontyczne",
       }}
       location={location.pathname}
@@ -42,7 +42,8 @@ const Ortodoncja = ({ data, location }) => (
         rozwoju mięśni i kości, co w przyszłości może prowadzić do poważnych
         problemów ortodontycznych wymagających długotrwałego leczenia. Wczesne
         leczenie ortodontyczne pozwala tak kształtować mięśnie i kości dziecka,
-        by zgryz prawidłowo się rozwijał.
+        by zabezpieczyc odpowiednią ilość miejsca dla wyrzynających się zębów
+        stałych. Dzięki temu zgryz dziecka będzie się prawidłowo rozwijał.
       </p>
       <p>
         Bardzo ważne podczas leczenia wczesnego jest podejście

@@ -12,7 +12,7 @@ const Fluoryzacja = ({ location }) => (
         type: "page",
         title: "Fluoryzacja zębów",
         description:
-          "Istnieje błędne przekonanie, iż fluoryzacja zębów u Dzieci bardziej szkodzi, niż pomaga. Zdecydowanie nie zgadzamy się z tym stwierdzeniem. Kluczem do sukcesu jest odpowiednie dawkowanie i wykonywanie zabiegu przez doświadczony zespół!",
+          "Istnieje przekonanie, iż fluoryzacja zębów u Dzieci bardziej szkodzi, niż pomaga. Zdecydowanie nie zgadzamy się z tym stwierdzeniem. Kluczem do sukcesu jest odpowiednie dawkowanie i wykonywanie zabiegu przez doświadczony zespół!",
         text: "Umów dziecko na zabieg fluoryzacji",
       }}
       location={location.pathname}
@@ -41,6 +41,7 @@ const Fluoryzacja = ({ location }) => (
           fluoryzacja jest zalecana już u 2-latków, a zabieg jest w pełni
           bezpieczny
         </li>
+        <li>zaleca się przeprowadzać fluoryzację zębów co 6 miesięcy.</li>
         <li>zabieg fluoryzacji jest bezbolesny i trwa tylko kilka minut</li>
         <li>
           lakier do fluoryzacji aplikowany jest na zęby przy pomocy specjalnego
