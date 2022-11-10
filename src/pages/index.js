@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import { useInView } from "react-intersection-observer"
 
@@ -11,9 +12,8 @@ import CubeLinks from "../components/cubeLinks/CubeLinks"
 import Form from "../components/form/Form"
 import GallerySlider from "../components/gallerySlider/GallerySlider"
 import Halfs from "../components/halfs/Halfs"
+
 import Movie from "../components/movie/Movie"
-
-
 
 // import * as styles from "../components/index.module.css"
 
@@ -88,7 +88,6 @@ const cubeElements = [
 // const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = ({ data, location }) => {
- 
   const { ref: ref1, inView: inView1 } = useInView({
     /* Optional options */
     threshold: 0,
@@ -97,7 +96,7 @@ const IndexPage = ({ data, location }) => {
     /* Optional options */
     threshold: 0,
   })
- 
+
   return (
     <Layout>
       <Seo title="Home" />
@@ -114,77 +113,104 @@ const IndexPage = ({ data, location }) => {
         description="U szczególnie wrażliwych Pacjentów, którzy nie współpracują z lekarzem, leczenie zębów przeprowadzamy pod narkozą. Dzięki temu nie narażamy dzieci na niepotrzebny stres."
         type="reverse"
         data={data.image1}
-        
       />
       <Halfs
         title="Profilaktyka"
         description="Codzienna higiena, wizyty kontrolne u dentysty, zabiegi profilaktyczne, zdrowe nawyki, odpowiednia dieta i prawidłowy poziom witaminy D - to wszystko pomaga zadbać o zdrowy uśmiech dziecka."
         type="standard"
         data={data.image2}
-        
       />
       <Halfs
         title="Ortodoncja"
         description="Wiek dziecięcy to jedyny moment, kiedy można wpłynąć na kształt rozwijającej się kości, by zapewnić w przyszłości prawidłowe ustawienie zębów. Dlatego nie zwlekaj z wizytą u ortodonty!"
         type="reverse color"
         data={data.image3}
-        
       />
-      <div ref={ref1} className={`container ${inView1 ? "fadeIn" : ""}`} >
-        <h2 >Jak leczymy</h2>
-        <h3 >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut consectetur
+      <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" title="Dentysta dla dzieci w Katowicach"/>
+      <div ref={ref1} className={`container ${inView1 ? "fadeIn" : ""}`}>
+        <h2>Jak leczymy</h2>
+        <h3>
+          Leczymy nie tylko skutecznie, ale przede wszystkim bezstresowo i w
+          komfortowych warunkach.
         </h3>
-        <p >
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem.
+        <p>
+          W trosce o bezpieczeństwo i zdrowie najmłodszych Pacjentów
+          wykorzystujemy szereg nowoczesnych rozwiązań (cyfrowe RTG, mikroskopy,
+          lasery diagnostyczne, skanery), które umożliwiają precyzyjną
+          diagnostykę i jak najmniej inwazyjne leczenie dzieci. Na każdym etapie
+          leczenia nad Twoim dzieckiem czuwa zespół specjalistów doświadczonych
+          w pracy z najmłodszymi— stomatolodzy, ortodonci, anestezjolodzy,
+          pielęgniarki i asystentki.
         </p>
+        <h3>Co oferujemy naszym młodym Pacjentom?</h3>
         <ul>
-          <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
           <li>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium
+            nowoczesne znieczulenie komputerowe, które skutecznie eliminuje ból
+            podczas leczenia
           </li>
+          <li>
+            gaz rozweselający (podtlenek azotu), który uspokaja i wycisza małego
+            Pacjenta
+          </li>
+          <li>
+            leczenie w narkozie dzieci, które ze strachu nie współpracują z
+            lekarzem
+          </li>
+          <li>laser diagnostyczny, który obiektywnie wykrywa próchnicę</li>
+          <li>
+            bezbolesna ozonoterapia w przypadku początkowych zmian
+            próchnicowych, bez konieczności „borowania”
+          </li>
+          <li>
+            zabiegi profilaktyczne, które chronią zęby dziecka przed próchnicą,
+            m.in. fluoryzacja i lakowanie
+          </li>
+          <li>
+            pełen zakres zabiegów stomatologii, chirurgii i ortodoncji
+            dziecięcej
+          </li>
+          <li>
+            badanie poziomu witaminy D, która odpowiada za zdrowie zębów i
+            zwiększa odporność na infekcje
+          </li>
+          <li>badania diagnostyczne (morfologia, CRP) bez użycia strzykawki</li>
         </ul>
-
-        <button className="btn btnPrimary">Umów wizytę</button>
+        <Link to="kontakt" className="btn btnPrimary">
+          Umów wizytę
+        </Link>
       </div>
       <CubeLinks cubeElements={cubeElements} />
       <div ref={ref2} className={`container ${inView2 ? "fadeIn" : ""}`}>
-        <h2>Zęby bez próchnicy</h2>
+        <h2>Gabinet przyjazny dzieciom</h2>
         <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut consectetur
+          Nasz gabinet został stworzony z myślą o dzieciach, a wizyta u nas jest
+          dla dziecka niesamowitą przygodą!
         </h3>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-          aliquam quaerat voluptatem.
+          Posiadamy poczekalnię połączoną z salą zabaw, gdzie dzieci mogą
+          wspaniale spędzić czas przed wizytą na fotelu dentystycznym. Nasze
+          gabinety są przystosowane do leczenia najmłodszych i panuje w nich
+          ciepła i przyjazna atmosfera. W czasie leczenia dzieci na ekranach
+          umieszczonych przy fotelach stomatologicznych wyświetlane są ulubione
+          dziecięce bajki. Za dzielną postawę i odwagę maluchy otrzymują
+          atrakcyjne upominki. To wszystko wzmacnia na przyszłość pozytywne
+          skojarzenia związane z wizytą u stomatologa.
         </p>
-        <ol>
-          <li>Bonsectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+        <h3>Dlaczego warto wybrać Wróżkę zębuszkę? </h3>
+        <p>Nasz gabinet posiada wszystko co potrzeba, by leczyć:</p>
+        <ul>
+          <li><strong>BEZBOLEŚNIE</strong> - znieczulenie komputerowe, podtlenek azotu, leczenie w narkozie</li>
           <li>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium
+            <strong>KOMPLEKSOWO </strong> - diagnostyka, profilaktyka i leczenie - wszystko w jednym miejscu
           </li>
-        </ol>
+          <li><strong>BEZSTRESOWO</strong> - przyjazna atmosfera, prezenty dla dzieci</li>
+          <li><strong>KOMFORTOWO</strong> - bajkowe wnętrza, personel doświadczony w pracy z dziećmi</li>
+          <li><strong>BEZPIECZNIE</strong> - nowoczesna diagnostyka, specjalistyczny sprzęt</li>
+          <li><strong>Z GWARANCJĄ</strong> - zabiegi wykonywane u nas objęte są gwarancją</li>
+        </ul>
       </div>
       <GallerySlider gallery={data.gallery} />
-      <Movie src="https://www.youtube.com/embed/81rHrMgRN2E" />
+      
       <section className={`container contactFlex`}>
         <Contact />
         <Form />

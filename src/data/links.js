@@ -16,9 +16,9 @@ export const footerLinks = [
   {
     title: "O nas",
     links: [
-      { text: "Jak leczymy", url: "zeby-bez-prochnicy" },
-      { text: "Badania", url: "badania" },
+      { text: "Jak leczymy", url: "twoje-korzysci" },
       { text: "Nasz gabinet", url: "nasz-gabinet" },
+      { text: "Diagnostyka", url: "diagnostyka" },
       { text: "Znieczulenia", url: "znieczulenia" },
     ],
   },

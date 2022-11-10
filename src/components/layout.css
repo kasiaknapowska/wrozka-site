@@ -372,6 +372,7 @@ ol li::before {
   display: inline-block;
   padding: var(--space-3) var(--space-4);
   text-transform: uppercase;
+  text-align: center;
   font-size: var(--font-sx);
   border-radius: var(--border-radius);
   border: 1px solid white;

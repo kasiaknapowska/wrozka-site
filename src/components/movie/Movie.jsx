@@ -3,12 +3,12 @@ import PropTypes from "prop-types"
 
 import { movie, movieFrame } from "./movie.module.css"
 
-const Movie = ({ src }) => {
+const Movie = ({ src, title }) => {
   return (
     <section className={movie}>
       <iframe
         className={movieFrame}
-        title="movie"
+        title={title}
         width="1080"
         height="700"
         src={src}
