@@ -57,7 +57,7 @@ const ZebyBezProchnicy = ({ data, location }) => {
         <h2>Witamina D a zdrowie zębów</h2>
         <h3>
           Najnowsze amerykańskie badania wskazują, że niedobór witaminy D
-          zwiększa skłonność do próchnicy w zębach mlecznych
+          zwiększa skłonność do próchnicy w zębach mlecznych.
         </h3>
         <p>
           Aż 90% dzieci zmaga się z niedoborem witaminy D, co wpływa nie tylko

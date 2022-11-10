@@ -7,6 +7,7 @@ import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
 import CubeLinks from "../../components/cubeLinks/CubeLinks"
 import GallerySlider from "../../components/gallerySlider/GallerySlider"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const cubeElements = [
   { name: "Leczenie dzieci", link: "ortodoncja/dzieci" },
@@ -120,6 +121,7 @@ const Ortodoncja = ({ data, location }) => (
         </li>
         <li>Retencja – utrzymanie efektów leczenia.</li>
       </ol>
+      <ArrowLink type="standard" link="ortodoncja/aparaty-ortodontyczne" text="Sprawdź dostępne aparaty ortodontyczne"/>
     </section>
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
