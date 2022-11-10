@@ -57,7 +57,7 @@ const Lakowanie = ({ location }) => (
       </ol>
     </section>
     <div className="container">
-      <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
+    <Link to="/profilaktyka">WRÓĆ DO STRONY PROFILAKTYKA</Link>
     </div>
   </Layout>
 )

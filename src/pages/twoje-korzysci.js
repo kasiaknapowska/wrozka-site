@@ -50,6 +50,7 @@ const TwojeKorzysci = ({ location }) => (
         <li>Badanie poziomu witaminy D</li>
         <li>Badania laboratoryjne</li>
       </ul>
+      <ArrowLink type="standard" link="znieczulenia" text="Jakie znieczulenia stosujemy u dzieci"/>
     </section>
     <section className="container">
       <h2>Zadbaj o zdrowie swojego Dziecka</h2>

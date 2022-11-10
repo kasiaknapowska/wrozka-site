@@ -77,7 +77,7 @@ const Higiena = ({ location }) => (
     </section>
     <Movie src="https://www.youtube.com/embed/Cjk1FhDuBp8" />
     <div className="container">
-      <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
+    <Link to="/profilaktyka">WRÓĆ DO STRONY PROFILAKTYKA</Link>
     </div>
   </Layout>
 )

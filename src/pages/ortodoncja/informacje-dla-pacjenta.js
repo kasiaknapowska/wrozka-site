@@ -95,7 +95,7 @@ const InformacjeDlaPacjenta = ({ location }) => (
       </ul>
     </section>
     <div className="container">
-      <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
+      <Link to="/ortodoncja">WRÓĆ DO STRONY ORTODONCJA</Link>
     </div>
   </Layout>
 )

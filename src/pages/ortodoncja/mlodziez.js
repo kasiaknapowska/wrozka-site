@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const Mlodziez = ({ location }) => (
   <Layout>
@@ -81,9 +82,10 @@ const Mlodziez = ({ location }) => (
         powrotem samodzielnie założyć. Nakładki są niemal niewidoczne i tak
         komfortowe, że… można o nich zapomnieć!
       </p>
+      <ArrowLink type="standard" link="ortodoncja/nakladki-ortodontyczne" text="Więcej o nakładkach ortodontycznych"/>
     </section>
     <div className="container">
-      <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
+      <Link to="/ortodoncja">WRÓĆ DO STRONY ORTODONCJA</Link>
     </div>
   </Layout>
 )
