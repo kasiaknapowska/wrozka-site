@@ -102,7 +102,7 @@ div.heroText {
   margin-bottom: var(--space-5);
 }
 @media screen and (min-width: 900px) {
-  .heroText > p {
+  .heroPage .heroText > p {
     max-width: var(--size-content);
     padding: var(--size-gutter) var(--size-gap);
     border: 1px solid var(--color-secondary);
