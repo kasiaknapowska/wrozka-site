@@ -56,7 +56,9 @@ const LeczenieProchnicy = ({ location }) => (
         </li>
         <li>
           <div>
-            Jeśli zmiana jest głęboka przeprowadzamy{" "}
+            W przypadku rozległych zmian próchnicowych lekarz może zadecydować o
+            wykonaniu zabiegu lapisowania. Jeśli zmiana jest głęboka
+            przeprowadzamy{" "}
             <Link className="textLink" to="/leczenie-kanalowe">
               leczenie kanałowe
             </Link>
@@ -67,10 +69,13 @@ const LeczenieProchnicy = ({ location }) => (
         <li>Po leczeniu dzielny Pacjent otrzymuje nagrodę.</li>
         <li>
           W ramach profilaktyki proponujemy wykonanie{" "}
-          <AnchorLink className="textLink" to="/zeby-bez-prochnicy#witamina-d" title="Witamina D">
-          &nbsp;badania witaminy D
+          <AnchorLink
+            className="textLink"
+            to="/zeby-bez-prochnicy#witamina-d"
+            title="Witamina D"
+          >
+            &nbsp;badania witaminy D
           </AnchorLink>
-          
           .
         </li>
       </ol>
