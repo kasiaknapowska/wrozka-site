@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
+import ArrowLink from "../components/arrowLink/ArrowLink"
 
 const PodciecieWedzidelka = ({ location }) => (
   <Layout>
@@ -71,7 +72,15 @@ const PodciecieWedzidelka = ({ location }) => (
           lasera biostymulującego.
         </li>
       </ol>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów wizytę"
+      />
     </section>
+
+ 
+
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
     </div>

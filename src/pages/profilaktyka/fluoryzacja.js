@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const Fluoryzacja = ({ location }) => (
   <Layout>
@@ -56,6 +57,11 @@ const Fluoryzacja = ({ location }) => (
           myciem zębów pastą z fluorem
         </li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Zapytaj o zabieg fluoryzacji"
+      />
     </section>
     <div className="container">
       <Link to="/profilaktyka">WRÓĆ DO STRONY PROFILAKTYKA</Link>

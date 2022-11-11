@@ -19,10 +19,10 @@ const Ozonowanie = ({ location }) => (
     />
     <section className="container">
       <h3>
-        Ozonowanie to skuteczny i bezbolesny zabieg profilaktyczny, który doskonale sprawdza się
-        zarówno w przypadku zębów mlecznych jak i stałych u dzieci. Ozonowanie
-        jest bezbolesne, trwa dosłownie chwilę i pozwala pozbyć się 99,9%
-        bakterii próchnicowych.
+        Ozonowanie to skuteczny i bezbolesny zabieg profilaktyczny, który
+        doskonale sprawdza się zarówno w przypadku zębów mlecznych jak i stałych
+        u dzieci. Ozonowanie jest bezbolesne, trwa dosłownie chwilę i pozwala
+        pozbyć się 99,9% bakterii próchnicowych.
       </h3>
       <p>
         Ozon to gaz, który ma silne działanie bakteriobójcze. Wystarczy kilka
@@ -48,8 +48,30 @@ const Ozonowanie = ({ location }) => (
         zdrowe zęby mleczne i stałe, z korzyścią dla zdrowia dziecka.
       </p>
     </section>
+    <section className="container">
+      <h2>Ozon w chirurgii i endodoncji</h2>
+      <h3>
+        Skuteczność ozonu w walce z bakteriami powoduje, że gaz ten jest z
+        powodzeniem wykorzystywany również podczas innych zabiegów
+        stomatologicznych.
+      </h3>
+      <p>
+        Ozon stosujemu po{" "}
+        <Link className="textLink" to="/ekstrakcje-zebow">
+          ekstrakcjach
+        </Link>{" "}
+        (usuwaniu) zębów w celu dezynfekcji zębodołu i przyspieszenia gojenia
+        tkanek. W{" "}
+        <Link className="textLink" to="/leczenie-kanalowe">
+          endodoncji
+        </Link>{" "}
+        gazowa postać ozonu doskonale sprawdza się w oczyszczaniu systemu
+        kanałow korzeniowych, które ze względu na skomplikowaną budowę i liczne
+        szczeliny jest trudna do oczyszczenia tradycyjnymi metodami.
+      </p>
+    </section>
     <div className="container">
-    <Link to="/profilaktyka">WRÓĆ DO STRONY PROFILAKTYKA</Link>
+      <Link to="/profilaktyka">WRÓĆ DO STRONY PROFILAKTYKA</Link>
     </div>
   </Layout>
 )

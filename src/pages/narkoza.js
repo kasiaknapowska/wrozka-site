@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
+import ArrowLink from "../components/arrowLink/ArrowLink"
 import CubeLinks from "../components/cubeLinks/CubeLinks"
 import GallerySlider from "../components/gallerySlider/GallerySlider"
 
@@ -83,6 +84,11 @@ const Narkoza = ({ data, location }) => (
         <li>istnieje możliwość rozłożenia kosztów leczenia na raty</li>
         <li>po leczeniu w narkozie dzielni mali Pacjenci otrzymują nagrody</li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów leczenie w narkozie"
+      />
     </section>
     <GallerySlider gallery={data.gallery}/>
     <section className="container">
@@ -123,7 +129,11 @@ const Narkoza = ({ data, location }) => (
           z personelem Wróżki Zębuszki.
         </li>
       </ul>
-      
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Masz pytania lub wątpliwości? Zadzwoń do nas"
+      />
     </section>
     <div className="container"><Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link></div>
   </Layout>

@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 import Movie from "../../components/movie/Movie"
 
 const Higiena = ({ location }) => (
@@ -74,6 +75,11 @@ const Higiena = ({ location }) => (
           to klucz do zachowania zdrowych zębów.
         </li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów wizytę"
+      />
     </section>
     <Movie src="https://www.youtube.com/embed/Cjk1FhDuBp8" />
     <div className="container">

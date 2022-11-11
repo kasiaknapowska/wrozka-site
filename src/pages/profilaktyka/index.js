@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 import CubeLinks from "../../components/cubeLinks/CubeLinks"
 import Movie from "../../components/movie/Movie"
 
@@ -110,6 +111,11 @@ const Profilaktyka = ({ location }) => (
         Drogi Rodzicu! Pamiętaj, że jesteś wzorem dla Twojego dziecka! Dlatego
         bądź dla niego dobrym przykładem do naśladowania!
       </h3>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Chcesz wiedzieć więcej - skontaktuj się z nami"
+      />
     </section>
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>

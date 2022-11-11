@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
+import ArrowLink from "../components/arrowLink/ArrowLink"
 
 const Diagnostyka = ({ location }) => (
   <Layout>
@@ -106,6 +107,11 @@ const Diagnostyka = ({ location }) => (
           na leczenie zęba lub gojenie po zabiegach.
         </li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów badanie"
+      />
     </section>
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>

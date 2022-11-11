@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const InformacjeDlaPacjenta = ({ location }) => (
   <Layout>
@@ -93,6 +94,11 @@ const InformacjeDlaPacjenta = ({ location }) => (
           w przypadku zagubienia aparatu niezwłocznie zgłoś się do ortodonty
         </li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Masz pytania? Skontaktuj się z nami"
+      />
     </section>
     <div className="container">
       <Link to="/ortodoncja">WRÓĆ DO STRONY ORTODONCJA</Link>

@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const NakladkiOrtodontyczne = ({ location }) => (
   <Layout>
@@ -104,6 +105,12 @@ const NakladkiOrtodontyczne = ({ location }) => (
           Pacjent może jeść to co lubi
         </li>
       </ul>
+      <h3>Chcesz wiedzieć, czy ta metoda leczenia ortodontycznego będzie odpowiednia dla Twojego dziecka?</h3>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów konsultację ortodontyczną"
+      />
     </section>
     <div className="container">
       <Link to="/ortodoncja">WRÓĆ DO STRONY ORTODONCJA</Link>

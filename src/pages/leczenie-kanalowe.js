@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero/Hero"
+import ArrowLink from "../components/arrowLink/ArrowLink"
 
 const LeczenieKanalowe = ({ location }) => (
   <Layout>
@@ -77,6 +78,11 @@ const LeczenieKanalowe = ({ location }) => (
         <li>gazowy ozon skutecznie dezynfekujący wszystkie szczeliny systemu kanałowego</li>
         <li>nanocząstki złota i srebra chroniące ząb przed infekcją wtórną</li>
       </ul>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów leczenie"
+      />
     </section>
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>

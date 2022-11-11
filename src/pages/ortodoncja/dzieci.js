@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import Hero from "../../components/hero/Hero"
+import ArrowLink from "../../components/arrowLink/ArrowLink"
 
 const Dzieci = ({ location }) => (
   <Layout>
@@ -91,6 +92,11 @@ const Dzieci = ({ location }) => (
         że proces wymiany uzębienia rozpoczyna się około 6 roku życia a kończy
         dopiero w wieku 10-12 lat.
       </p>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Umów wizytę u ortodonty"
+      />
     </section>
     <div className="container">
       <Link to="/ortodoncja">WRÓĆ DO STRONY ORTODONCJA</Link>

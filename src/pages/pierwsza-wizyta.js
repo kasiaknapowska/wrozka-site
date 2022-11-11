@@ -99,6 +99,11 @@ const PierwszaWizyta = ({ location }) => (
           też możliwość płatności w systemie ratalnym.
         </li>
       </ol>
+      <ArrowLink
+        type="standard"
+        link="kontakt"
+        text="Nie zwlekaj - umów wizytę u dentysty"
+      />
     </section>
     <div className="container">
       <Link to="/">WRÓĆ DO STRONY GŁÓWNEJ</Link>
