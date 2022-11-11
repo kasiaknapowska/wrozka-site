@@ -21,7 +21,7 @@ const Profilaktyka = ({ location }) => (
         type: "page",
         title: "Profilaktyka",
         description:
-          "Zęby mleczne różnią się swoją anatomią od zębów stałych. Są słabiej zmineralizowane, przez co są bardziej podatne na rozwój próchnicy. Biorąc pod uwagę fakt, że u dzieci trudniej zachować prawidłową higienę uzębienia, próchnica w zębach mlecznych postępuje błyskawicznie i w krótkim czasie może doprowadzić do zniszczenia całych koron zębowych i zainfekowania wyrzynających się zębów stałych. Dlatego tak ważna jest profilaktyka i regularne kontrole u stomatologa co 3-6 miesięcy.",
+          "Zęby mleczne różnią się swoją anatomią od zębów stałych. Są słabiej zmineralizowane, przez co są bardziej podatne na rozwój próchnicy. Biorąc pod uwagę fakt, że u dzieci trudniej zachować prawidłową higienę uzębienia, próchnica w zębach mlecznych postępuje błyskawicznie i w krótkim czasie może doprowadzić do zniszczenia całych koron zębowych i zainfekowania wyrzynających się zębów stałych. Dlatego tak ważna jest profilaktyka i regularne kontrole u stomatologa co 3-4 miesiące.",
         text: "Umów kontrolę u dentysty",
       }}
       location={location.pathname}

@@ -75,6 +75,12 @@ module.exports = {
           include: /svg/
         }
       }
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
     }
   ],
 }

@@ -53,7 +53,7 @@ const ZebyBezProchnicy = ({ data, location }) => {
         <ArrowLink type="standard" link="diagnostyka" text="Sprawdź nasze metody diagnostyczne"/>
       </section>
       <CubeLinks cubeElements={cubeElements} />
-      <section className="container">
+      <section className="container" id="witamina-d">
         <h2>Witamina D a zdrowie zębów</h2>
         <h3>
           Najnowsze amerykańskie badania wskazują, że niedobór witaminy D

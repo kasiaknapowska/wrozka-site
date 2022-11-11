@@ -298,7 +298,12 @@ a:hover {
   text-decoration-color: var(--color-secondary);
   text-underline-offset: 6px;
 }
-
+a.textLink {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
 ul li {
   position: relative;
   left: -1.5rem;
