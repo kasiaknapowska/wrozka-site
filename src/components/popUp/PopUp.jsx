@@ -2,7 +2,9 @@ import { Link } from "gatsby"
 import React from "react"
 import { useState } from "react"
 
-import { popUpBg ,popUpContainer, popUpBtn } from "./popUp.module.css"
+import Icon from "../../svg/icon-404.svg"
+
+import { popUpBg, popUpContainer, popUpIcon, popUpBtn} from "./popUp.module.css"
 
 const PopUp = () => {
   const [showPopUp, setShowPopUp] = useState(true)
@@ -24,16 +26,16 @@ const PopUp = () => {
       }}
     >
       <div className={popUpContainer}>
-        Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym
-        poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich
-        użycie.
-      </div>
-
-        <button onClick={() => setShow()} className={popUpBtn}>
+        <Icon className={popUpIcon}/>
+        <h4>This website is under construction </h4>
+        <p>Images and movies displayed on
+        the Wróżka Zębuszka website are taken from stomatologiadziecieca.com</p>
+        
+        <button onClick={() => setShow()} className={`btn btnPrimary ${popUpBtn}`}>
           Zamknij
         </button>
       </div>
-   
+    </div>
   )
 }
 
