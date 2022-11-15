@@ -119,6 +119,6 @@ const Diagnostyka = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Diagnostyka" />
+export const Head = () => <Seo title="Diagnostyka" description={"Umów wizytę! Wykonujemy badania diagnostyczne, które wykrywają nieprawidłowości wpływające na zdrowie i zęby dzieci. Laserowa diagnostyka próchnicy. Badania RTG. Morfologia. Badanie poziomu witaminy D."}/>
 
 export default Diagnostyka

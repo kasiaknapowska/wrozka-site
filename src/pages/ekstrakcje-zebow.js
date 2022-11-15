@@ -87,6 +87,6 @@ const EkstrakcjeZebow = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Ekstrakcje zębów u dzieci" />
+export const Head = () => <Seo title="Ekstrakcje zębów u dzieci" description={"Usuwanie zębów w podtlenku azotu i narkozie. Bez bólu i stresu. Wykwalifikowana kadra stomatologów dziecięcych. Zadzwoń i umów wizytę. "} />
 
 export default EkstrakcjeZebow

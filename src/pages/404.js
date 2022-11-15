@@ -17,6 +17,6 @@ const NotFoundPage = () => (
   
 )
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = () => <Seo title="404: Not Found" description={"Przejdź do strony głównej - Stomatologia dziecięca w Katowicach"} />
 
 export default NotFoundPage

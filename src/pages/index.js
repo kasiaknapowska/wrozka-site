@@ -265,7 +265,7 @@ const IndexPage = ({ data, location }) => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Stomatologia dziecięca w Katowicach" description={"Twoje dziecko może polubić wizyty u dentysty! Pzeprowadzamy leczenie zębów mlecznych i stałych w narkozie i podtlenku azotu. Bez bólu i stresu, w bajkowych gabinetach."}/>
 
 export const pageQuery = graphql`
   query {

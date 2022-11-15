@@ -55,6 +55,6 @@ const Kontakt = ({ location }) => {
   )
 }
 
-export const Head = () => <Seo title="Kontakt" />
+export const Head = () => <Seo title="Kontakt" description={"Szukasz dentysty dla Twojego dziecka. Zadzwoń i umów wizytę."}/>
 
 export default Kontakt
