@@ -14,6 +14,7 @@ import "./layout.css"
 import Footer from "./footer/Footer"
 import ScrollToTop from "react-scroll-to-top";
 import CookiesModal from "./cookiesModal/CookiesModal"
+import PopUp from "./popUp/PopUp"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer/>
+      <PopUp/>
       <ScrollToTop smooth color="#55aba7"/>
       <CookiesModal/>
     </>
