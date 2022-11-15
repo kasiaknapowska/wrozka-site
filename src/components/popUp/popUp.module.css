@@ -18,6 +18,7 @@
     position: relative;
     border-radius: var(--border-radius-s);
     padding: calc(var(--size-gap) + 8rem) var(--size-gutter) var(--size-gap) var(--size-gutter);
+
 }
 
 
@@ -47,7 +48,10 @@ margin: 0;
 }
 @media screen and (min-width: 500px) {
     .popUpContainer {
-        padding: calc(var(--size-gap) + 8rem) var(--size-gap) var(--size-gap) var(--size-gap);
+        padding: var(--size-gap);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .popUpIcon {
         width: 8rem;
@@ -61,9 +65,10 @@ margin: 0;
         height: var(--h); 
         top: calc((100vh - var(--h)) / 2);
         left: calc((100% - var(--w)) / 2);
-        padding: 6rem var(--size-gap) var(--size-gap) var(--size-gap);
     }
-   
+    .popUpContainer > h4 {
+        max-width: 60%;
+    }
     .popUpContainer > p:first-of-type {
         padding-right: calc(var(--size-gutter) * 3);
     }
@@ -73,7 +78,7 @@ margin: 0;
         --w: 800px;      
         width: var(--w);
         left: calc((100% - var(--w)) / 2);
-        padding: 6rem var(--size-gap) var(--size-gap) var(--size-gap);
+        
     }
    
     .popUpContainer > p:first-of-type {
