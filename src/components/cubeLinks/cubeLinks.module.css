@@ -31,6 +31,9 @@
     overflow: visible;
     /* padding-left: .75rem; */
 }
+.cubeIcon path {
+  fill: white;
+}
 
 .cubeLinksContainer h3 {
     margin: 0;
