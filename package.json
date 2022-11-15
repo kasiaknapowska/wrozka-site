@@ -20,10 +20,14 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.38.0",
     "react-intersection-observer": "^9.4.0",
-    "react-scroll-to-top": "^3.0.0"
+    "react-scroll-to-top": "^3.0.0",
+    "loader-utils": ">=1.4.1",
+    "got": ">=11.8.5"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "loader-utils": ">=1.4.1",
+    "got": ">=11.8.5"
   },
   "keywords": [
     "gatsby"
