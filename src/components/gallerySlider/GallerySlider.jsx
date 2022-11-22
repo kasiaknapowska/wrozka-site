@@ -13,8 +13,7 @@ import {
 
 const GallerySlider = ({ gallery }) => {
   const images = gallery.nodes.map(el => getImage(el))
-  // console.log(gallery)
-  // console.log(images)
+ 
   const [previousIndex, setPreviousIndex] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(1)
   const [nextIndex, setNextIndex] = useState(2)

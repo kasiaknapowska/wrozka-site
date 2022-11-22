@@ -10,14 +10,12 @@ const Form = ({ type }) => {
   const {
     register,
     handleSubmit,
-    // watch,
     formState: { errors },
   } = useForm({ defaultValues: { privacy: false, data: false } })
 
   const onSubmit = data => console.log(data)
 
   const { ref, inView } = useInView({
-    /* Optional options */
     threshold: 0,
   })
 

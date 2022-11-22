@@ -31,10 +31,6 @@ const Halfs = ({ data, type, video, title, description, text }) => {
     [inViewRef]
   )
 
-  // console.log(inView)
-
-  // console.log(data.nodes[0])
-  // console.log(...data.nodes)
   const image = getImage(...data.nodes)
   return (
     <section

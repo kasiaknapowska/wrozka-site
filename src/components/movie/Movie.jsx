@@ -19,7 +19,7 @@ const Movie = ({ src, title }) => {
         webkitallowfullscreen="true"
         mozallowfullscreen="true"
         allowFullScreen
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write"
       ></iframe>
     </section>
   )
