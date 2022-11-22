@@ -7,13 +7,19 @@ import { Link } from "gatsby"
 import CalendarIcon from "../../svg/icon-calendar.svg"
 
 const Form = ({ type }) => {
+  const [formIsSubmitted, setFormIsSubmitted] = React.useState(false)
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({ defaultValues: { privacy: false, data: false } })
 
-  const onSubmit = data => console.log(data)
+  const onSubmit = data => {
+    console.log(data)
+    setFormIsSubmitted(true)
+    reset()
+  }
 
   const { ref, inView } = useInView({
     threshold: 0,
@@ -25,10 +31,15 @@ const Form = ({ type }) => {
         <h2 style={{ marginBottom: "var(--size-gap)" }}>Wypełnij formularz</h2>
       ) : undefined}
       <form
-      ref={ref}
+        method="post" netlify-honeypot="bot-field" data-netlify="true" name="contactWrozkaZebuszka"
+        ref={ref}
         onSubmit={handleSubmit(onSubmit)}
-        className={`${type === "contact" ? "contactPageForm" : ""} ${inView ? "fadeIn" : ''}`}
+        className={`${type === "contact" ? "contactPageForm" : ""} ${
+          inView ? "fadeIn" : ""
+        }`}
       >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contactWrozkaZebuszka" />
         <label>
           Imię i nazwisko dziecka * &nbsp;&nbsp;
           {errors.name && (
@@ -170,7 +181,8 @@ const Form = ({ type }) => {
           <span></span>
           <div>
             Zapoznałem (-am) się z Polityką prywatności.{" "}
-            <Link to="/polityka-prywatnosci">Treść polityki prywatności.</Link> * &nbsp;&nbsp;{" "}
+            <Link to="/polityka-prywatnosci">Treść polityki prywatności.</Link>{" "}
+            * &nbsp;&nbsp;{" "}
             {errors.privacy && (
               <span className="errorMessage">{errors.privacy?.message}</span>
             )}
@@ -202,7 +214,13 @@ const Form = ({ type }) => {
         <button className="btn btnPrimary" type="submit">
           Wyślij
         </button>
-        {/* {errors && console.log(errors)} */}
+        <div>
+          {formIsSubmitted && (
+            <span className="successMessage">
+              Dziękujemy za przesłanie formularza
+            </span>
+          )}
+        </div>
       </form>
     </>
   )
