@@ -107,7 +107,7 @@ const InformacjeDlaPacjenta = ({ location }) => (
 )
 
 export const Head = () => (
-  <Seo title="Leczenie ortodontyczne, higiena i retencja" />
+  <Seo title="Leczenie ortodontyczne, higiena i retencja" description={"Dowiedz się, jak postępować podczas leczenia ortodontycznego, gdy nosisz aparat stały, ruchomy lub przezroczyste nakładki ortodontyczne. Jak utrzymać higienę, by zęby pozostały zdrowe."}/>
 )
 
 export default InformacjeDlaPacjenta

@@ -82,6 +82,6 @@ const TwojeKorzysci = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Twoje korzyści" />
+export const Head = () => <Seo title="Twoje korzyści" description={"Dbamy kompleksowo o zdrowie dzieci. Zapewniamy profilaktykę, leczenie próchnicy, leczenie ortodontyczne oraz badania laboratoryjne pozwalające zdiagnozować i wyeliminować infekcje, stany zapalne, niedobory witamin."}/>
 
 export default TwojeKorzysci

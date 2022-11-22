@@ -88,6 +88,6 @@ const Higiena = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Jak dbać o zęby dziecka" />
+export const Head = () => <Seo title="Jak dbać o zęby dziecka" description={"Aby zapobiec rozwojowi próchnicy u dzieci ważna jest codzienna higiena, zdrowa dieta oraz regularne kontrole u dentysty co 3-4 miesiące."}/>
 
 export default Higiena

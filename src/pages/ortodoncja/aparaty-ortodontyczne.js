@@ -55,6 +55,6 @@ const AparatyOrtodontyczne = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Aparaty ortodontyczne dla dzieci" />
+export const Head = () => <Seo title="Aparaty ortodontyczne dla dzieci" description={"Rodzaj aparatu zależy od wieku dziecka i rodzaju wady zgryzu. Stosujemy aparaty ruchome, przezroczyste nakładki ortodontyczne oraz estetyczne aparaty stałe."}/>
 
 export default AparatyOrtodontyczne

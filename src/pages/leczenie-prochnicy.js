@@ -100,6 +100,6 @@ const LeczenieProchnicy = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Leczenie próchnicy" />
+export const Head = () => <Seo title="Leczenie próchnicy" description={"Próchnica w początkowym stadium diagnozowana jest laserowo. Leczymy w znieczuleniu miejscowym, podtlenku azotu i narkozie. Wczesne zmiany próchnicowe leczymy bez borowania."}/>
 
 export default LeczenieProchnicy

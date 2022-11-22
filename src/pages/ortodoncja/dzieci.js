@@ -104,6 +104,6 @@ const Dzieci = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Leczenie ortodontyczne dzieci" />
+export const Head = () => <Seo title="Leczenie ortodontyczne dzieci" description={"Gdy u Twojego dziecka pojawiają się pierwsze zęby mleczne warto odwiedzć ortodontę. W tym wieku możemy wpłynąć na rozwój mięśni i kości tak, by uniknąć wad zgryzu w przyszłości."}/>
 
 export default Dzieci

@@ -87,6 +87,6 @@ const PodciecieWedzidelka = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Podcięcie wędzidełka u dziecka" />
+export const Head = () => <Seo title="Podcięcie wędzidełka u dziecka" description={"Stosujemy małoinwazyjną metodę podcięcia wędzidełka. Zabieg wykonujemy w znieczuleniu miejscowym z sedacją wziewną lub znieczuleniu ogólnym (narkozie)."}/>
 
 export default PodciecieWedzidelka

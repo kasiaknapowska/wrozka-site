@@ -129,7 +129,7 @@ const Ortodoncja = ({ data, location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Ortodoncja dla dzieci i młodzieży" />
+export const Head = () => <Seo title="Ortodoncja dla dzieci i młodzieży" description={"Nie zwlekaj - umów wizytę do ortodonty dziecięcego! Optymalny wiek na pierwszą kontrolę ortodontyczną to 3-5 lat, gdy kształtują się mięśnie i kości dziecka. Regularne kontrole pozwolą uniknąć skomplikowanego leczenia w wieku dorosłym."}/>
 
 export const pageQuery = graphql`
   query {

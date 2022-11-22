@@ -139,7 +139,7 @@ const Narkoza = ({ data, location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Leczenie zębów w narkozie" />
+export const Head = () => <Seo title="Leczenie zębów w narkozie" description={"Nad bezpieczeństwem dziecka czuwa doświadczony anestezjolog i pielęgniarka. Zabieg przebiega bezstresowo i bezboleśnie, najczęściej podczas jednej wizyty leczymy zęby kompleksowo. "}/>
 
 export const pageQuery = graphql`
 query {

@@ -110,7 +110,7 @@ const ZebyBezProchnicy = ({ data, location }) => {
   )
 }
 
-export const Head = () => <Seo title="Zęby bez próchnicy" />
+export const Head = () => <Seo title="Zęby bez próchnicy" description={"Zdrowe zęby mleczne to inwestycja nie tylko w zdrowe zęby stałe i prawidłowy zgryz. To także dobre zdrowie ogólne i samopoczucie dziecka! Nie zwlekaj z wizytą u dentysty!"}/>
 
 export const pageQuery = graphql`
   query {

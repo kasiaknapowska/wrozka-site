@@ -76,6 +76,6 @@ const Ozonowanie = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Ozonowanie zębów" />
+export const Head = () => <Seo title="Ozonowanie zębów" description={"Ozonowanie jest szybkie i bezbolesne, skutecznie chroni przed rozwojem próchnicy i często pozwala uniknąć nieprzyjemnego borowania. Zapraszamy!"}/>
 
 export default Ozonowanie

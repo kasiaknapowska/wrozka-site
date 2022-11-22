@@ -105,7 +105,7 @@ const Znieczulenia = ({ location }) => (
 )
 
 export const Head = () => (
-  <Seo title="Rodzaje znieczuleń stosowanych u dzieci" />
+  <Seo title="Rodzaje znieczuleń stosowanych u dzieci" description={"Leczenie stomatologiczne dzieci wykonujemy w znieczuleniu miejscowym, podtlenku azotu i narkozie. Dzięki temu leczenie przebiega komfortowo dla małego Pacjenta."}/>
 )
 
 export default Znieczulenia

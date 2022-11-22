@@ -121,7 +121,7 @@ const PierwszaWizyta = ({ data, location }) => {
   )
 }
 
-export const Head = () => <Seo title="Pierwsza wizyta u dentysty" />
+export const Head = () => <Seo title="Pierwsza wizyta u dentysty" description={"Pierwsza wizyta dziecka u dentysty powinna odbyć się w momencie wyrastania pierwszych zębów. Aby zapewnić dziecku komfort i dobre wspomnienia, warto wybrać gabinet typowo dziecięcy. Zapraszamy do Wróżki Zębuszki!"}/>
 
 export const pageQuery = graphql`
   query {

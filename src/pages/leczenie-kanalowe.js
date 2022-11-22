@@ -90,6 +90,6 @@ const LeczenieKanalowe = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Leczenie kanałowe u dzieci" />
+export const Head = () => <Seo title="Leczenie kanałowe u dzieci" description={"Przed leczeniem kanałowym (przewodowym) zębów mlecznych przeprowadzamy dogłębną diagnostykę RTG, kwalifikującą do zabiegu."}/>
 
 export default LeczenieKanalowe

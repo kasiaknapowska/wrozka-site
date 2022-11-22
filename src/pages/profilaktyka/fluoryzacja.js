@@ -69,6 +69,6 @@ const Fluoryzacja = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Fluoryzacja zębów" />
+export const Head = () => <Seo title="Fluoryzacja zębów" description={"Fluoryzacja przeprowadzana pod kontrolą stomatologa jest w pełni bezpieczna dla dziecka. Wystarczy przeprowadzać zabieg 2 razy w roku, bo ochronić zęby dziecka przed rozwojem próchnicy."}/>
 
 export default Fluoryzacja

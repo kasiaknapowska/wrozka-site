@@ -51,6 +51,6 @@ const PolitykaPrywatnosci = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Wróżka Zębuszka - polityka prywatności" />
+export const Head = () => <Seo title="Wróżka Zębuszka - polityka prywatności" description={"Administratorem danych osobowych jest firma Roman Borczyk Klinika Implantologii i Stomatologii Estetycznej sp.j. w Katowicach"}/>
 
 export default PolitykaPrywatnosci

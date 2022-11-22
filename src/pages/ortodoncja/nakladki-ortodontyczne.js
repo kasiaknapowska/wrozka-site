@@ -118,6 +118,6 @@ const NakladkiOrtodontyczne = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Przezroczyste nakladki ortodontyczne" />
+export const Head = () => <Seo title="Przezroczyste nakladki ortodontyczne" description={"W naszym gabinecie leczymy wady zgryzu za pomocą przezroczystych nakładek ortodontycznych. Komfort, dyskrecja, łatwa higiena - to tylko kilka zalet tego rozwiązania."}/>
 
 export default NakladkiOrtodontyczne

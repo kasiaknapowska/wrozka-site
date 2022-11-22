@@ -69,7 +69,7 @@ Hero.propTypes = {
 }
 
 Hero.defaultProps = {
-  hero: { type: "page", title: "", description: "" },
+  hero: { type: "page", title: "Dentysta dla Twojego dziecka", description: "Wróżka Zębuszka to miejsce, gdzie w kompleksowy sposób zadbamy o uśmiech, zdrowie i dobre samopoczucie Twojego dziecka." },
 }
 
 export default Hero

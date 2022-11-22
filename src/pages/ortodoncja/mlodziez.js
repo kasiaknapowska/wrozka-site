@@ -90,6 +90,6 @@ const Mlodziez = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Leczenie ortodontyczne młodzieży" />
+export const Head = () => <Seo title="Leczenie ortodontyczne młodzieży" description={"Rozpoczęcie leczenia u młodych Pacjentów daje bardziej przewidywalne efekty i pozwala skrócić czas leczenia w porównaniu z leczeniem osób dorosłych. Uzyskujemy prawidłowo ustawione zęby, harmonijny wzrost twarzoczaszki oraz poprawiamy rysy twarzy."}/>
 
 export default Mlodziez

@@ -68,6 +68,6 @@ const Lakowanie = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Lakowanie zębów" />
+export const Head = () => <Seo title="Lakowanie zębów" description={"Umów wizytę na lakowanie zębów! Lakowanie chroni trudne do oczyszczenia bruzdy zębowe przed próchnicą. Zabieg może być wykonany jedynie w zdrowych zębach, dlatego przed lakowaniem badamy zęby laserem diagnostycznym."}/>
 
 export default Lakowanie

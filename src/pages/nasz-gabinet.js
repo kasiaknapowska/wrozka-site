@@ -33,7 +33,7 @@ const NaszGabinet = ({ data, location }) => {
 }
 
 export const Head = () => (
-  <Seo title="Stomatologia dla dzieci Wróżka zębuszka - galeria zdjęć" />
+  <Seo title="Stomatologia i ortodoncja dla dzieci - zobacz zdjęcia naszego gabinetu" description={"Gabinet Wróżka Zębuszka został stworzony z myślą o najmłodszych Pacjentach. Kkolorowe, bajkowe wnętrza i przyjazna atmosfera zachęcają dzieci do kontroli u dentysty."}/>
 )
 
 export const pageQuery = graphql`

@@ -123,6 +123,6 @@ const Profilaktyka = ({ location }) => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Profilaktyka - zdrowe zęby dziecka" />
+export const Head = () => <Seo title="Profilaktyka - zdrowe zęby dziecka" description={"W naszym gabinecie wykonujemy zabiegi profilaktyczne, chroniące przed próchnicą zębów u dzieci - ozonowanie, fluoryzacja, lakowanie. Wczesne zmiany próchnicowe wykrywamy laserem diagnostycznym i leczymy bez borowania."}/>
 
 export default Profilaktyka
