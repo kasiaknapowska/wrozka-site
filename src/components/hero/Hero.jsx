@@ -32,6 +32,7 @@ const Hero = ({ hero, location }) => {
           loading="eager"
           quality={95}
           formats={["auto", "webp", "avif"]}
+          style={{position: "absolute"}}
         />
       ) : undefined}
       <div
