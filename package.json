@@ -14,20 +14,18 @@
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
+    "loader-utils": ">=1.4.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.38.0",
     "react-intersection-observer": "^9.4.0",
-    "react-scroll-to-top": "^3.0.0",
-    "loader-utils": ">=1.4.1"
-   
+    "react-scroll-to-top": "^3.0.0"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "loader-utils": ">=1.4.1"
-   
+    "loader-utils": ">=1.4.1",
+    "prettier": "^2.7.1"
   },
   "keywords": [
     "gatsby"
