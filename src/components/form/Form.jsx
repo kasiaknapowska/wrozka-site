@@ -15,10 +15,29 @@ const Form = ({ type }) => {
     formState: { errors },
   } = useForm({ defaultValues: { privacy: false, data: false } })
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   const onSubmit = data => {
     console.log(data)
-    setFormIsSubmitted(true)
-    reset()
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contactWrozkaZebuszka", ...data })
+    })
+      .then(() => {
+        setFormIsSubmitted(true)
+        reset()
+      })
+      .catch(error => alert(error));
+
+
+    // setFormIsSubmitted(true)
+    // reset()
   }
 
   const { ref, inView } = useInView({

@@ -366,7 +366,7 @@ ol li::before {
 .container {
   margin: 0 auto;
   max-width: 90%;
-  padding: var(--size-gap) 0;
+  padding: var(--size-gutter) 0;
 }
 .containerS {
   margin: 0 auto;
