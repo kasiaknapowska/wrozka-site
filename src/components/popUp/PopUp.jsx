@@ -9,33 +9,37 @@ const PopUp = () => {
   const [showPopUp, setShowPopUp] = useState(true)
 
   function setShow() {
-    sessionStorage.setItem("popup", false)
+    if (window) {
+      sessionStorage.setItem("popup", false)
+    }
     setShowPopUp(false)
   }
 
-  return (
-    <div
-      className={popUpBg}
-      style={{
-        display: `${
-          sessionStorage.getItem("popup") || showPopUp.toString() === "false"
-            ? "none"
-            : "block"
-        }`,
-      }}
-    >
-      <div className={popUpContainer}>
-        <Icon className={popUpIcon}/>
-        <h4>This website is under construction </h4>
-        <p>Images and movies displayed on
-        the Wróżka Zębuszka website are taken from stomatologiadziecieca.com</p>
-        
-        <button onClick={() => setShow()} className={`btn btnPrimary ${popUpBtn}`}>
-          Zamknij
-        </button>
+  if (window) {
+    return (
+      <div
+        className={popUpBg}
+        style={{
+          display: `${
+            sessionStorage.getItem("popup") || showPopUp.toString() === "false"
+              ? "none"
+              : "block"
+          }`,
+        }}
+      >
+        <div className={popUpContainer}>
+          <Icon className={popUpIcon}/>
+          <h4>This website is under construction </h4>
+          <p>Images and movies displayed on
+          the Wróżka Zębuszka website are taken from stomatologiadziecieca.com</p>
+          
+          <button onClick={() => setShow()} className={`btn btnPrimary ${popUpBtn}`}>
+            Zamknij
+          </button>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default PopUp
