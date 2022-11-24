@@ -4,23 +4,26 @@ import { useState } from "react"
 
 import { cookiesContainer, modalBtn } from "./cookiesModal.module.css"
 
+const isBrowser = typeof window !== "undefined"
+
+
 const CookiesModal = () => {
   const [showModal, setShowModal] = useState(true)
 
   function setModal() {
-    if (window) {
-      sessionStorage.setItem("cookies", false)
+    if (isBrowser) {
+      window.sessionStorage.setItem("cookies", false)
     }
     setShowModal(false)
   }
 
-  if (window) {
+  if (isBrowser) {
     return (
       <div
         className={cookiesContainer}
         style={{
           display: `${
-            sessionStorage.getItem("cookies") || showModal.toString() === "false"
+            window.sessionStorage.getItem("cookies") || showModal.toString() === "false"
               ? "none"
               : "flex"
           }`,

@@ -5,23 +5,25 @@ import Icon from "../../svg/icon-404.svg"
 
 import { popUpBg, popUpContainer, popUpIcon, popUpBtn} from "./popUp.module.css"
 
+const isBrowser = typeof window !== "undefined"
+
 const PopUp = () => {
   const [showPopUp, setShowPopUp] = useState(true)
 
   function setShow() {
-    if (window) {
-      sessionStorage.setItem("popup", false)
+    if (isBrowser) {
+      window.sessionStorage.setItem("popup", false)
     }
     setShowPopUp(false)
   }
 
-  if (window) {
+  if (isBrowser) {
     return (
       <div
         className={popUpBg}
         style={{
           display: `${
-            sessionStorage.getItem("popup") || showPopUp.toString() === "false"
+            window.sessionStorage.getItem("popup") || showPopUp.toString() === "false"
               ? "none"
               : "block"
           }`,
