@@ -36,6 +36,9 @@
 .backgroundImage {
   display: none;
 }
+.backgroundImage .gatsby-image-wrapper {
+  position: absolute;
+}
 @media screen and (min-width: 340px) {
   .formSectionContainer {
     padding: calc(2 * var(--size-gap)) 0;
