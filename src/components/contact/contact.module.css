@@ -1,6 +1,7 @@
 .contactContainer {
     width: 100%;
 }
+
 .contact {
     display: flex;
     align-items: center;
@@ -9,7 +10,14 @@
 .contact > p {
     margin: 0 0 0 var(--space-3);
 }
-
+@media screen and (max-width: 320px) {
+    .contact svg {
+        display: none;
+    }
+    .contact > p {
+        margin: 0;
+    }
+}
 @media screen and (min-width: 900px) {
     .contactContainer {
         width: 50%;
