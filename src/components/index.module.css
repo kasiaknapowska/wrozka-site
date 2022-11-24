@@ -67,7 +67,7 @@
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
   .contactPageSectionContainer {
     flex-direction: row;
   }
