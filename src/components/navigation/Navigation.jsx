@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
@@ -24,6 +24,14 @@ import {
 
 const Navigation = ({ navigationType, location }) => {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) {
+      html.style.overflow = isOpen ? "hidden" : "auto";
+    }
+  }, [isOpen]);
+
   return (
     <div className="container flex">
       <Link to="/">

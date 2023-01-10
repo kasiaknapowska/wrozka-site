@@ -22,7 +22,7 @@ const Form = ({ type }) => {
   }
 
   const onSubmit = data => {
-    console.log(data)
+    // console.log(data)
 
     fetch("/", {
       method: "POST",
@@ -35,9 +35,6 @@ const Form = ({ type }) => {
       })
       .catch(error => alert(error));
 
-
-    // setFormIsSubmitted(true)
-    // reset()
   }
 
   const { ref, inView } = useInView({

@@ -23,7 +23,7 @@
   display: block;
   -webkit-animation: fadeIn 0.25s;
   animation: fadeIn 0.25s;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -31,7 +31,7 @@
   background-color: var(--color-secondary);
   z-index: 3;
   text-align: center;
-  padding-top: 25vh;
+  padding-top: 15vh;
 }
 
 .heroNavMobile a {
