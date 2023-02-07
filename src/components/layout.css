@@ -459,6 +459,12 @@ footer {
   right: 0 !important;
   z-index: 50 !important;
   /* box-shadow: none !important; */
+  
+}
+@media screen and (max-width: 500px) {
+  .scroll-to-top {
+    display: none;
+  }
 }
 /* FORM STYLES START */
 form {
